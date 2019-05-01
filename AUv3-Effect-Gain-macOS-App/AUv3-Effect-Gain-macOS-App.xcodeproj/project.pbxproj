@@ -23,6 +23,9 @@
 		893DCEA42278146700F19BA0 /* AUv3_Effect_Gain_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 893DCE942278146700F19BA0 /* AUv3_Effect_Gain_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		893DCEA72278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; };
 		893DCEA82278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		895417CA227943B3006962C7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		895417CC227943C5006962C7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
+		895417CF2279444B006962C7 /* AUv3_Effect_Gain_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +129,9 @@
 		893DCE9A2278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AUv3-Effect-Gain-FrameworkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		893DCEA12278146700F19BA0 /* AUv3_Effect_Gain_FrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUv3_Effect_Gain_FrameworkTests.m; sourceTree = "<group>"; };
 		893DCEA32278146700F19BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		895417C9227943B3006962C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		895417CB227943C5006962C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		895417CD227943D3006962C7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895417CF2279444B006962C7 /* AUv3_Effect_Gain_Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +169,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895417CC227943C5006962C7 /* AudioToolbox.framework in Frameworks */,
+				895417CA227943B3006962C7 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +195,7 @@
 				893DCE932278146700F19BA0 /* AUv3-Effect-Gain-Framework */,
 				893DCEA02278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests */,
 				893DCE432278136400F19BA0 /* Products */,
+				895417C8227943B2006962C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +276,16 @@
 				893DCEA32278146700F19BA0 /* Info.plist */,
 			);
 			path = "AUv3-Effect-Gain-FrameworkTests";
+			sourceTree = "<group>";
+		};
+		895417C8227943B2006962C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				895417CD227943D3006962C7 /* AudioUnit.framework */,
+				895417CB227943C5006962C7 /* AudioToolbox.framework */,
+				895417C9227943B3006962C7 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
