@@ -6,8 +6,11 @@
 //  Copyright © 2019 John Carlson. All rights reserved.
 //
 
+#import <Cocoa/Cocoa.h>
 #import <CoreAudioKit/CoreAudioKit.h>
 
 @interface AudioUnitViewController : AUViewController <AUAudioUnitFactory>
+
+@property (strong) IBOutlet NSObjectController *volumeObjectController;
 
 @end

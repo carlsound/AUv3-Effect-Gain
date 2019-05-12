@@ -12,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="c22-O7-iKe" customClass="AudioUnitViewController">
+        <customView id="c22-O7-iKe" customClass="AudioUnitView">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -32,10 +32,5 @@
                 </textField>
             </subviews>
         </customView>
-        <slider verticalHuggingPriority="750" id="27Y-4Z-ApJ">
-            <rect key="frame" x="0.0" y="0.0" width="444" height="19"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="H59-lf-KUW"/>
-        </slider>
     </objects>
 </document>
