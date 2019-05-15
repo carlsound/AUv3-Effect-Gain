@@ -20,6 +20,9 @@
                     <rect key="frame" x="18" y="126" width="444" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Nuy-dU-Ypk"/>
+                    <connections>
+                        <binding destination="M7A-eK-UEd" name="value" keyPath="selection" id="h1J-ol-21p"/>
+                    </connections>
                 </slider>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-dy-QRp">
                     <rect key="frame" x="216" y="151" width="49" height="17"/>
@@ -32,5 +35,11 @@
                 </textField>
             </subviews>
         </customView>
+        <objectController automaticallyPreparesContent="YES" id="M7A-eK-UEd"/>
+        <viewController nibName="AudioUnitView" id="Vjr-mn-RTU" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension">
+            <connections>
+                <outlet property="volumeObjectController" destination="M7A-eK-UEd" id="a9g-uZ-Sgc"/>
+            </connections>
+        </viewController>
     </objects>
 </document>

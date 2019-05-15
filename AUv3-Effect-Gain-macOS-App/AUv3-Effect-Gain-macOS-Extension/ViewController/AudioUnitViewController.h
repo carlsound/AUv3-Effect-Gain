@@ -8,9 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreAudioKit/CoreAudioKit.h>
+#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit"
 
 @interface AudioUnitViewController : AUViewController <AUAudioUnitFactory>
 
-@property (strong) IBOutlet NSObjectController *volumeObjectController;
+@property (strong) IBOutlet NSObjectController* volumeObjectController;
+
+@property AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
 
 @end
