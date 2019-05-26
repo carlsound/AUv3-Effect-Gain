@@ -8,12 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreAudioKit/CoreAudioKit.h>
-#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit"
+#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
 
-@interface AudioUnitViewController : AUViewController <AUAudioUnitFactory>
+@interface AudioUnitViewController : AUViewController <AUAudioUnitFactory>{
+    
+    IBOutlet NSSlider* gainSlider;
+}
 
-@property (strong) IBOutlet NSObjectController* volumeObjectController;
+//@property (strong) IBOutlet NSObjectController* volumeObjectController;
 
 @property AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
+
+-(void) viewDidLoad;
+
+-(IBAction)gainSliderChanged:(NSSlider*)sender;
 
 @end

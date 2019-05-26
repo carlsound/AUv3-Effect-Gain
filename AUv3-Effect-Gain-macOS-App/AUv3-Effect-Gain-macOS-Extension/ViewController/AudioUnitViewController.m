@@ -13,9 +13,15 @@
 
 @end
 
+//////////////////////////////////////////////////////////
+
 @implementation AudioUnitViewController {
-    AUAudioUnit *audioUnit;
+    //AUAudioUnit *audioUnit;
 }
+
+@synthesize audioUnit;
+
+AUParameter* _gainParameter;
 
 - (void) viewDidLoad {
     [super viewDidLoad];
@@ -27,10 +33,32 @@
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
 }
 
-- (AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription)desc error:(NSError **)error {
-    audioUnit = [[AUv3_Effect_Gain_macOS_ExtensionAudioUnit alloc] initWithComponentDescription:desc error:error];
+- (void)beginRequestWithExtensionContext:(nonnull NSExtensionContext *)context {
+    //
+}
+
+- (nullable AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription)desc error:(NSError * _Nullable __autoreleasing * _Nullable)error {
+    
+    audioUnit = [audioUnit initWithComponentDescription:desc options:kAudioComponentInstantiation_LoadOutOfProcess error:error];
+    
+    _gainParameter = [audioUnit.parameterTree parameterWithAddress:gainParameterAddress];
+    
+    gainSlider.integerValue = [_gainParameter value];
     
     return audioUnit;
+}
+
+- (BOOL)commitEditingAndReturnError:(NSError * _Nullable __autoreleasing * _Nullable)error {
+    return TRUE;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    //
+}
+
+-(IBAction)gainSliderChanged:(NSSlider*)sender{
+    
+    [_gainParameter setValue: (int) sender.integerValue];
 }
 
 @end

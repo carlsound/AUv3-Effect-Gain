@@ -26,7 +26,6 @@
 		895417CA227943B3006962C7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
 		895417CC227943C5006962C7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
 		895417CF2279444B006962C7 /* AUv3_Effect_Gain_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; };
-		89F1EB032287A77F00007ED7 /* AudioUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F1EB012287A77F00007ED7 /* AudioUnitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +132,6 @@
 		895417C9227943B3006962C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		895417CB227943C5006962C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		895417CD227943D3006962C7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
-		89F1EB002287A77F00007ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/AudioUnitView.h; sourceTree = "<group>"; };
-		89F1EB022287A77F00007ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/AudioUnitView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,8 +323,6 @@
 			isa = PBXGroup;
 			children = (
 				893DCE812278140C00F19BA0 /* AudioUnitView.xib */,
-				89F1EAFF2287A77F00007ED7 /* AudioUnitView.h */,
-				89F1EB012287A77F00007ED7 /* AudioUnitView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,7 +595,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89F1EB032287A77F00007ED7 /* AudioUnitView.m in Sources */,
 				893DCE7D2278140C00F19BA0 /* AUv3_Effect_Gain_macOS_ExtensionAudioUnit.m in Sources */,
 				893DCE802278140C00F19BA0 /* AudioUnitViewController.m in Sources */,
 			);
@@ -671,22 +665,6 @@
 				893DCE822278140C00F19BA0 /* Base */,
 			);
 			name = AudioUnitView.xib;
-			sourceTree = "<group>";
-		};
-		89F1EAFF2287A77F00007ED7 /* AudioUnitView.h */ = {
-			isa = PBXVariantGroup;
-			children = (
-				89F1EB002287A77F00007ED7 /* Base */,
-			);
-			name = AudioUnitView.h;
-			sourceTree = "<group>";
-		};
-		89F1EB012287A77F00007ED7 /* AudioUnitView.m */ = {
-			isa = PBXVariantGroup;
-			children = (
-				89F1EB022287A77F00007ED7 /* Base */,
-			);
-			name = AudioUnitView.m;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

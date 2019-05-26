@@ -2,15 +2,18 @@
 //  AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h
 //  AUv3-Effect-Gain-macOS-Extension
 //
-//  Created by John Carlson on 4/30/19.
-//  Copyright © 2019 John Carlson. All rights reserved.
+//
+// AUv3 example code: https://github.com/invalidstream/ring-modulator-v3audiounit
 //
 
 #import <AudioToolbox/AudioToolbox.h>
+#import <AudioToolbox/AUAudioUnit.h>
+#import <AudioUnit/AUAudioUnit.h>
+#import <AVFoundation/AVFoundation.h>
 
 // Define parameter addresses.
-extern const AudioUnitParameterID myParam1;
+/*extern */ const AUParameterAddress gainParameterAddress = 0; // https://developer.apple.com/documentation/audiotoolbox/auparameteraddress?language=objc
 
-@interface AUv3_Effect_Gain_macOS_ExtensionAudioUnit : AUAudioUnit
+@interface AUv3_Effect_Gain_macOS_ExtensionAudioUnit : AUAudioUnit // https://developer.apple.com/documentation/audiotoolbox/auaudiounit?language=objc
 
 @end
