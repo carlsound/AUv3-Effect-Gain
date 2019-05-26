@@ -10,6 +10,8 @@
 
 // Define parameter addresses.
 //const AudioUnitParameterID myParam1 = 0;
+//extern AUParameterAddress gainParameterAddress;
+
 
 @interface AUv3_Effect_Gain_macOS_ExtensionAudioUnit ()
 
@@ -51,6 +53,8 @@
 @synthesize inputBusArray = _inputBusArray;
 @synthesize outputBusArray = _outputBusArray;
 
+const AUParameterAddress _GAIN_PARAMETER_ADDRESS = 0; // https://developer.apple.com/documentation/audiotoolbox/auparameteraddress?language=objc
+
 AUAudioUnitBus* _inputBus;
 
 AudioStreamBasicDescription _streamBasicDescription; // local copy of the asbd that block can capture
@@ -90,7 +94,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
     // Create parameter objects.
     AUParameter* gainParameter = [AUParameterTree createParameterWithIdentifier:@"gainParameter"
                                                                            name:@"Gain Parameter "
-                                                                        address:gainParameterAddress
+                                                                        address:_GAIN_PARAMETER_ADDRESS
                                                                             min:0
                                                                             max:100
                                                                            unit:kAudioUnitParameterUnit_Percent
@@ -118,7 +122,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
     // implementorValueObserver is called when a parameter changes value.
     _parameterTree.implementorValueObserver = ^(AUParameter *param, AUValue value) {
         switch (param.address) {
-            case gainParameterAddress:
+            case _GAIN_PARAMETER_ADDRESS:
                 _gain = value;
                 break;
             default:
@@ -129,7 +133,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
     // implementorValueProvider is called when the value needs to be refreshed.
     _parameterTree.implementorValueProvider = ^(AUParameter *param) {
         switch (param.address) {
-            case gainParameterAddress:
+            case _GAIN_PARAMETER_ADDRESS:
                 return _gain; // TODO: is this capturing self?
             default:
                 return (AUValue) 0.0;
@@ -143,7 +147,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
         AUValue value = valuePtr == nil ? param.value : *valuePtr;
         
         switch (param.address) {
-            case gainParameterAddress:
+            case _GAIN_PARAMETER_ADDRESS:
                 return [NSString stringWithFormat:@"%.f", value];
             default:
                 return @"?";
@@ -155,6 +159,11 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
     return self;
 }
 
+
+-(AUParameterAddress)getGainParamterAddress{
+    
+    return _GAIN_PARAMETER_ADDRESS;
+}
 
 
 #pragma mark - AUAudioUnit Overrides

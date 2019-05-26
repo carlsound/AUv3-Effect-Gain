@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		893DCE472278136400F19BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE462278136400F19BA0 /* AppDelegate.m */; };
-		893DCE4A2278136400F19BA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE492278136400F19BA0 /* ViewController.m */; };
 		893DCE4C2278136400F19BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893DCE4B2278136400F19BA0 /* Assets.xcassets */; };
-		893DCE4F2278136400F19BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893DCE4D2278136400F19BA0 /* Main.storyboard */; };
 		893DCE522278136400F19BA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE512278136400F19BA0 /* main.m */; };
 		893DCE5D2278136400F19BA0 /* AUv3_Effect_Gain_macOS_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE5C2278136400F19BA0 /* AUv3_Effect_Gain_macOS_AppTests.m */; };
 		893DCE682278136400F19BA0 /* AUv3_Effect_Gain_macOS_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE672278136400F19BA0 /* AUv3_Effect_Gain_macOS_AppUITests.m */; };
@@ -18,14 +16,8 @@
 		893DCE802278140C00F19BA0 /* AudioUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE7F2278140C00F19BA0 /* AudioUnitViewController.m */; };
 		893DCE832278140C00F19BA0 /* AudioUnitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893DCE812278140C00F19BA0 /* AudioUnitView.xib */; };
 		893DCE882278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		893DCE9B2278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; };
-		893DCEA22278146700F19BA0 /* AUv3_Effect_Gain_FrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCEA12278146700F19BA0 /* AUv3_Effect_Gain_FrameworkTests.m */; };
-		893DCEA42278146700F19BA0 /* AUv3_Effect_Gain_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 893DCE942278146700F19BA0 /* AUv3_Effect_Gain_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		893DCEA72278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; };
-		893DCEA82278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		895417CA227943B3006962C7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
-		895417CC227943C5006962C7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
-		895417CF2279444B006962C7 /* AUv3_Effect_Gain_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */; };
+		89691582229B0FB0009AB182 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89691581229B0FB0009AB182 /* Application.xib */; };
+		89691585229B113B009AB182 /* AudioUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89691584229B113B009AB182 /* AudioUnitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,27 +42,6 @@
 			remoteGlobalIDString = 893DCE782278140C00F19BA0;
 			remoteInfo = "AUv3-Effect-Gain-macOS-Extension";
 		};
-		893DCE9C2278146700F19BA0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 893DCE912278146700F19BA0;
-			remoteInfo = "AUv3-Effect-Gain-Framework";
-		};
-		893DCE9E2278146700F19BA0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 893DCE412278136400F19BA0;
-			remoteInfo = "AUv3-Effect-Gain-macOS-App";
-		};
-		893DCEA52278146700F19BA0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 893DCE912278146700F19BA0;
-			remoteInfo = "AUv3-Effect-Gain-Framework";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,27 +56,13 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		893DCEAC2278146700F19BA0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				893DCEA82278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		893DCE422278136400F19BA0 /* AUv3-Effect-Gain-macOS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AUv3-Effect-Gain-macOS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		893DCE452278136400F19BA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		893DCE462278136400F19BA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		893DCE482278136400F19BA0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		893DCE492278136400F19BA0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		893DCE4B2278136400F19BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		893DCE4E2278136400F19BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		893DCE502278136400F19BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		893DCE512278136400F19BA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		893DCE532278136400F19BA0 /* AUv3_Effect_Gain_macOS_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3_Effect_Gain_macOS_App.entitlements; sourceTree = "<group>"; };
@@ -123,15 +80,12 @@
 		893DCE822278140C00F19BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AudioUnitView.xib; sourceTree = "<group>"; };
 		893DCE842278140C00F19BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		893DCE852278140C00F19BA0 /* AUv3_Effect_Gain_macOS_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3_Effect_Gain_macOS_Extension.entitlements; sourceTree = "<group>"; };
-		893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AUv3_Effect_Gain_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		893DCE942278146700F19BA0 /* AUv3_Effect_Gain_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUv3_Effect_Gain_Framework.h; sourceTree = "<group>"; };
-		893DCE952278146700F19BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		893DCE9A2278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AUv3-Effect-Gain-FrameworkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		893DCEA12278146700F19BA0 /* AUv3_Effect_Gain_FrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUv3_Effect_Gain_FrameworkTests.m; sourceTree = "<group>"; };
-		893DCEA32278146700F19BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895417C9227943B3006962C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		895417CB227943C5006962C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		895417CD227943D3006962C7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		89691581229B0FB0009AB182 /* Application.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
+		89691583229B113B009AB182 /* AudioUnitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitView.h; sourceTree = "<group>"; };
+		89691584229B113B009AB182 /* AudioUnitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893DCEA72278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,24 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				895417CF2279444B006962C7 /* AUv3_Effect_Gain_Framework.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		893DCE8F2278146700F19BA0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				895417CC227943C5006962C7 /* AudioToolbox.framework in Frameworks */,
-				895417CA227943B3006962C7 /* AVFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		893DCE972278146700F19BA0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				893DCE9B2278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +127,6 @@
 				893DCE5B2278136400F19BA0 /* AUv3-Effect-Gain-macOS-AppTests */,
 				893DCE662278136400F19BA0 /* AUv3-Effect-Gain-macOS-AppUITests */,
 				893DCE7A2278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */,
-				893DCE932278146700F19BA0 /* AUv3-Effect-Gain-Framework */,
-				893DCEA02278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests */,
 				893DCE432278136400F19BA0 /* Products */,
 				895417C8227943B2006962C7 /* Frameworks */,
 			);
@@ -206,8 +139,6 @@
 				893DCE582278136400F19BA0 /* AUv3-Effect-Gain-macOS-AppTests.xctest */,
 				893DCE632278136400F19BA0 /* AUv3-Effect-Gain-macOS-AppUITests.xctest */,
 				893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */,
-				893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */,
-				893DCE9A2278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,24 +189,6 @@
 			path = "AUv3-Effect-Gain-macOS-Extension";
 			sourceTree = "<group>";
 		};
-		893DCE932278146700F19BA0 /* AUv3-Effect-Gain-Framework */ = {
-			isa = PBXGroup;
-			children = (
-				893DCE942278146700F19BA0 /* AUv3_Effect_Gain_Framework.h */,
-				893DCE952278146700F19BA0 /* Info.plist */,
-			);
-			path = "AUv3-Effect-Gain-Framework";
-			sourceTree = "<group>";
-		};
-		893DCEA02278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests */ = {
-			isa = PBXGroup;
-			children = (
-				893DCEA12278146700F19BA0 /* AUv3_Effect_Gain_FrameworkTests.m */,
-				893DCEA32278146700F19BA0 /* Info.plist */,
-			);
-			path = "AUv3-Effect-Gain-FrameworkTests";
-			sourceTree = "<group>";
-		};
 		895417C8227943B2006962C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,8 +202,6 @@
 		89F1EAF92287A09900007ED7 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				893DCE482278136400F19BA0 /* ViewController.h */,
-				893DCE492278136400F19BA0 /* ViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -298,7 +209,7 @@
 		89F1EAFA2287A0D000007ED7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				893DCE4D2278136400F19BA0 /* Main.storyboard */,
+				89691581229B0FB0009AB182 /* Application.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				893DCE812278140C00F19BA0 /* AudioUnitView.xib */,
+				89691583229B113B009AB182 /* AudioUnitView.h */,
+				89691584229B113B009AB182 /* AudioUnitView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,17 +251,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		893DCE8D2278146700F19BA0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				893DCEA42278146700F19BA0 /* AUv3_Effect_Gain_Framework.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		893DCE412278136400F19BA0 /* AUv3-Effect-Gain-macOS-App */ = {
 			isa = PBXNativeTarget;
@@ -358,13 +260,11 @@
 				893DCE3F2278136400F19BA0 /* Frameworks */,
 				893DCE402278136400F19BA0 /* Resources */,
 				893DCE8C2278140C00F19BA0 /* Embed App Extensions */,
-				893DCEAC2278146700F19BA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				893DCE872278140C00F19BA0 /* PBXTargetDependency */,
-				893DCEA62278146700F19BA0 /* PBXTargetDependency */,
 			);
 			name = "AUv3-Effect-Gain-macOS-App";
 			productName = "AUv3-Effect-Gain-macOS-App";
@@ -424,43 +324,6 @@
 			productReference = 893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		893DCE912278146700F19BA0 /* AUv3-Effect-Gain-Framework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 893DCEA92278146700F19BA0 /* Build configuration list for PBXNativeTarget "AUv3-Effect-Gain-Framework" */;
-			buildPhases = (
-				893DCE8D2278146700F19BA0 /* Headers */,
-				893DCE8E2278146700F19BA0 /* Sources */,
-				893DCE8F2278146700F19BA0 /* Frameworks */,
-				893DCE902278146700F19BA0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "AUv3-Effect-Gain-Framework";
-			productName = "AUv3-Effect-Gain-Framework";
-			productReference = 893DCE922278146700F19BA0 /* AUv3_Effect_Gain_Framework.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		893DCE992278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 893DCEAD2278146700F19BA0 /* Build configuration list for PBXNativeTarget "AUv3-Effect-Gain-FrameworkTests" */;
-			buildPhases = (
-				893DCE962278146700F19BA0 /* Sources */,
-				893DCE972278146700F19BA0 /* Frameworks */,
-				893DCE982278146700F19BA0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				893DCE9D2278146700F19BA0 /* PBXTargetDependency */,
-				893DCE9F2278146700F19BA0 /* PBXTargetDependency */,
-			);
-			name = "AUv3-Effect-Gain-FrameworkTests";
-			productName = "AUv3-Effect-Gain-FrameworkTests";
-			productReference = 893DCE9A2278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -484,13 +347,6 @@
 					893DCE782278140C00F19BA0 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
-					893DCE912278146700F19BA0 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
-					893DCE992278146700F19BA0 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 893DCE412278136400F19BA0;
-					};
 				};
 			};
 			buildConfigurationList = 893DCE3D2278136400F19BA0 /* Build configuration list for PBXProject "AUv3-Effect-Gain-macOS-App" */;
@@ -510,8 +366,6 @@
 				893DCE572278136400F19BA0 /* AUv3-Effect-Gain-macOS-AppTests */,
 				893DCE622278136400F19BA0 /* AUv3-Effect-Gain-macOS-AppUITests */,
 				893DCE782278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */,
-				893DCE912278146700F19BA0 /* AUv3-Effect-Gain-Framework */,
-				893DCE992278146700F19BA0 /* AUv3-Effect-Gain-FrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -521,8 +375,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89691582229B0FB0009AB182 /* Application.xib in Resources */,
 				893DCE4C2278136400F19BA0 /* Assets.xcassets in Resources */,
-				893DCE4F2278136400F19BA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,20 +402,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		893DCE902278146700F19BA0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		893DCE982278146700F19BA0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -569,7 +409,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893DCE4A2278136400F19BA0 /* ViewController.m in Sources */,
 				893DCE522278136400F19BA0 /* main.m in Sources */,
 				893DCE472278136400F19BA0 /* AppDelegate.m in Sources */,
 			);
@@ -595,23 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89691585229B113B009AB182 /* AudioUnitView.m in Sources */,
 				893DCE7D2278140C00F19BA0 /* AUv3_Effect_Gain_macOS_ExtensionAudioUnit.m in Sources */,
 				893DCE802278140C00F19BA0 /* AudioUnitViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		893DCE8E2278146700F19BA0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		893DCE962278146700F19BA0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				893DCEA22278146700F19BA0 /* AUv3_Effect_Gain_FrameworkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,32 +458,9 @@
 			target = 893DCE782278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */;
 			targetProxy = 893DCE862278140C00F19BA0 /* PBXContainerItemProxy */;
 		};
-		893DCE9D2278146700F19BA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 893DCE912278146700F19BA0 /* AUv3-Effect-Gain-Framework */;
-			targetProxy = 893DCE9C2278146700F19BA0 /* PBXContainerItemProxy */;
-		};
-		893DCE9F2278146700F19BA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 893DCE412278136400F19BA0 /* AUv3-Effect-Gain-macOS-App */;
-			targetProxy = 893DCE9E2278146700F19BA0 /* PBXContainerItemProxy */;
-		};
-		893DCEA62278146700F19BA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 893DCE912278146700F19BA0 /* AUv3-Effect-Gain-Framework */;
-			targetProxy = 893DCEA52278146700F19BA0 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		893DCE4D2278136400F19BA0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				893DCE4E2278136400F19BA0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		893DCE812278140C00F19BA0 /* AudioUnitView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -897,6 +699,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AUv3-Effect-Gain-macOS-Extension/AUv3_Effect_Gain_macOS_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8SEUM7VKM;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "AUv3-Effect-Gain-macOS-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -915,6 +718,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AUv3-Effect-Gain-macOS-Extension/AUv3_Effect_Gain_macOS_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8SEUM7VKM;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "AUv3-Effect-Gain-macOS-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -924,98 +728,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-macOS-App.AUv3-Effect-Gain-macOS-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		893DCEAA2278146700F19BA0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P8SEUM7VKM;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "AUv3-Effect-Gain-Framework/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-Framework";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		893DCEAB2278146700F19BA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P8SEUM7VKM;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "AUv3-Effect-Gain-Framework/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-Framework";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		893DCEAE2278146700F19BA0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = P8SEUM7VKM;
-				INFOPLIST_FILE = "AUv3-Effect-Gain-FrameworkTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-FrameworkTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUv3-Effect-Gain-macOS-App.app/Contents/MacOS/AUv3-Effect-Gain-macOS-App";
-			};
-			name = Debug;
-		};
-		893DCEAF2278146700F19BA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = P8SEUM7VKM;
-				INFOPLIST_FILE = "AUv3-Effect-Gain-FrameworkTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-FrameworkTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUv3-Effect-Gain-macOS-App.app/Contents/MacOS/AUv3-Effect-Gain-macOS-App";
 			};
 			name = Release;
 		};
@@ -1063,24 +775,6 @@
 			buildConfigurations = (
 				893DCE8A2278140C00F19BA0 /* Debug */,
 				893DCE8B2278140C00F19BA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		893DCEA92278146700F19BA0 /* Build configuration list for PBXNativeTarget "AUv3-Effect-Gain-Framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				893DCEAA2278146700F19BA0 /* Debug */,
-				893DCEAB2278146700F19BA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		893DCEAD2278146700F19BA0 /* Build configuration list for PBXNativeTarget "AUv3-Effect-Gain-FrameworkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				893DCEAE2278146700F19BA0 /* Debug */,
-				893DCEAF2278146700F19BA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

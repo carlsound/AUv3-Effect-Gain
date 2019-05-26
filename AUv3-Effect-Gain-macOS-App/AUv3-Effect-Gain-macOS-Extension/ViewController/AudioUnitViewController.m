@@ -19,9 +19,12 @@
     //AUAudioUnit *audioUnit;
 }
 
+
 @synthesize audioUnit;
 
 AUParameter* _gainParameter;
+
+
 
 - (void) viewDidLoad {
     [super viewDidLoad];
@@ -33,21 +36,29 @@ AUParameter* _gainParameter;
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
 }
 
+
+
 - (void)beginRequestWithExtensionContext:(nonnull NSExtensionContext *)context {
-    //
+    
+    [super beginRequestWithExtensionContext:context];
 }
+
+
 
 - (nullable AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription)desc error:(NSError * _Nullable __autoreleasing * _Nullable)error {
     
     audioUnit = [audioUnit initWithComponentDescription:desc options:kAudioComponentInstantiation_LoadOutOfProcess error:error];
     
-    _gainParameter = [audioUnit.parameterTree parameterWithAddress:gainParameterAddress];
+    _gainParameter = [audioUnit.parameterTree parameterWithAddress:[audioUnit getGainParamterAddress]];
     
     gainSlider.integerValue = [_gainParameter value];
     
     return audioUnit;
 }
 
+
+
+/*
 - (BOOL)commitEditingAndReturnError:(NSError * _Nullable __autoreleasing * _Nullable)error {
     return TRUE;
 }
@@ -55,6 +66,9 @@ AUParameter* _gainParameter;
 - (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
     //
 }
+ */
+
+
 
 -(IBAction)gainSliderChanged:(NSSlider*)sender{
     
