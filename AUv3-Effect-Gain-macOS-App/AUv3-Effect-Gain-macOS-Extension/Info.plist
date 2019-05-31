@@ -52,8 +52,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>NSExtensionMainNibFile</key>
-		<string>AudioUnitView</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.AudioUnit-UI</string>
 		<key>NSExtensionPrincipalClass</key>

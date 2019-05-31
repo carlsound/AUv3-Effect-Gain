@@ -18,7 +18,7 @@
     IBOutlet NSSlider* gainSlider;
 }
 
-@property AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
+//@property AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
 
 -(void) viewDidLoad;
 

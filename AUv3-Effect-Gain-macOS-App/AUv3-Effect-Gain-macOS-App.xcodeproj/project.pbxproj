@@ -17,7 +17,6 @@
 		893DCE832278140C00F19BA0 /* AudioUnitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893DCE812278140C00F19BA0 /* AudioUnitView.xib */; };
 		893DCE882278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		89691582229B0FB0009AB182 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89691581229B0FB0009AB182 /* Application.xib */; };
-		89691585229B113B009AB182 /* AudioUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89691584229B113B009AB182 /* AudioUnitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +83,6 @@
 		895417CB227943C5006962C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		895417CD227943D3006962C7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		89691581229B0FB0009AB182 /* Application.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
-		89691583229B113B009AB182 /* AudioUnitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitView.h; sourceTree = "<group>"; };
-		89691584229B113B009AB182 /* AudioUnitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,8 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				893DCE812278140C00F19BA0 /* AudioUnitView.xib */,
-				89691583229B113B009AB182 /* AudioUnitView.h */,
-				89691584229B113B009AB182 /* AudioUnitView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,7 +429,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89691585229B113B009AB182 /* AudioUnitView.m in Sources */,
 				893DCE7D2278140C00F19BA0 /* AUv3_Effect_Gain_macOS_ExtensionAudioUnit.m in Sources */,
 				893DCE802278140C00F19BA0 /* AudioUnitViewController.m in Sources */,
 			);

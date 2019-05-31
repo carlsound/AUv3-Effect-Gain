@@ -17,10 +17,11 @@
 
 @implementation AudioUnitViewController {
     //AUAudioUnit *audioUnit;
+    AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
 }
 
 
-@synthesize audioUnit;
+//@synthesize audioUnit;
 
 AUParameter* _gainParameter;
 
