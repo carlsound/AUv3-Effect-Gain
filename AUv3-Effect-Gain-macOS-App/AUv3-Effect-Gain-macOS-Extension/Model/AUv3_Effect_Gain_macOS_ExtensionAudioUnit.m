@@ -49,9 +49,9 @@
 @implementation AUv3_Effect_Gain_macOS_ExtensionAudioUnit
 
 @synthesize parameterTree = _parameterTree;
-@synthesize outputBus = _outputBus;
-@synthesize inputBusArray = _inputBusArray;
-@synthesize outputBusArray = _outputBusArray;
+//@synthesize outputBus = _outputBus;
+//@synthesize inputBusArray = _inputBusArray;
+//@synthesize outputBusArray = _outputBusArray;
 
 const AUParameterAddress _GAIN_PARAMETER_ADDRESS = 0; // https://developer.apple.com/documentation/audiotoolbox/auparameteraddress?language=objc
 
@@ -173,7 +173,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // See sample code.
 -(AUAudioUnitBusArray*)inputBusses {
 //#pragma message("implementation must return non-nil AUAudioUnitBusArray")
-    NSLog (@"MyAudioUnit inputBusses called");
+    NSLog (@"Uv3_Effect_Gain_macOS_ExtensionAudioUnit inputBusses called");
     return _inputBusArray;
 }
 
@@ -184,7 +184,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // See sample code.
 -(AUAudioUnitBusArray*)outputBusses {
 //#pragma message("implementation must return non-nil AUAudioUnitBusArray")
-    NSLog (@"MyAudioUnit outputBusses called");
+    NSLog (@"Uv3_Effect_Gain_macOS_ExtensionAudioUnit outputBusses called");
     return _outputBusArray;
 }
 
@@ -239,20 +239,16 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
         // Do event handling and signal processing here.
         
         
-        // ????
-        // cheat: use logged asbd's format from above (float + packed + noninterleaved)
+        // use logged AudioStreamBasicDescription format from above (float + packed + noninterleaved)
         if (streamBasicDescriptionCapture->mFormatID != kAudioFormatLinearPCM || streamBasicDescriptionCapture->mFormatFlags != 0x29 || streamBasicDescriptionCapture->mChannelsPerFrame != 2) {
             return -999;
         }
-        
         
         
         // pull in samples to filter
         pullInputBlock(actionFlags, timestamp, frameCount, 0, renderAudioBufferListCapture);
         
         
-        //????
-        //@TODO: fix logic for simple gain multiplier, instead of example ring modulator
         // copy samples from AudioBufferList, apply gain multiplier, write to outputData
         size_t sampleSize = sizeof(Float32);
         for (int frame = 0; frame < frameCount; frame++) {
