@@ -54,8 +54,8 @@
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.AudioUnit-UI</string>
-		<key>NSExtensionPrincipalClass</key>
-		<string>AudioUnitViewController</string>
+		<key>NSExtensionMainStoryboard</key>
+		<string>AudioUnitView</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 John Carlson. All rights reserved.</string>

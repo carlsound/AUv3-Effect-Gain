@@ -9,69 +9,165 @@
 #import "AudioUnitViewController.h"
 #import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
 
-@interface AudioUnitViewController ()
+@interface AudioUnitViewController (){
+    
+}
+
+-(void)connectViewWithAU;
+-(void)disconnectViewWithAU;
 
 @end
 
 //////////////////////////////////////////////////////////
 
 @implementation AudioUnitViewController {
+    
     //AUAudioUnit *audioUnit;
-    AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
+    AUv3_Effect_Gain_macOS_ExtensionAudioUnit* _audioUnit;
+    AUParameter* _gainParameter;
+    AUParameterObserverToken _parameterObserverToken;
 }
-
-
-//@synthesize audioUnit;
-
-AUParameter* _gainParameter;
-
 
 
 - (void) viewDidLoad {
+    
     [super viewDidLoad];
     
-    if (!audioUnit) {
-        return;
+    if(_audioUnit){
+        // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
+        [self connectViewWithAU];
     }
+}
+
+
+- (void) dealloc {
     
-    // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
+    [self disconnectViewWithAU];
 }
 
 
 
-- (void)beginRequestWithExtensionContext:(nonnull NSExtensionContext *)context {
+#pragma mark- getter
+- (AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) getAudioUnit {
     
-    [super beginRequestWithExtensionContext:context];
+    return _audioUnit;
+}
+
+#pragma mark- setter
+- (void)setAudioUnit:(AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) audioUnit {
+    
+    _audioUnit = audioUnit;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self isViewLoaded]) {
+            [self connectViewWithAU];
+        }
+    });
 }
 
 
 
-- (nullable AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription)desc error:(NSError * _Nullable __autoreleasing * _Nullable)error {
-    
-    audioUnit = [audioUnit initWithComponentDescription:desc options:kAudioComponentInstantiation_LoadOutOfProcess error:error];
-    
-    _gainParameter = [audioUnit.parameterTree parameterWithAddress:[audioUnit getGainParamterAddress]];
-    
-    gainSlider.integerValue = [_gainParameter value];
-    
-    return audioUnit;
-}
 
-
-
+#pragma mark- KVO
 /*
-- (BOOL)commitEditingAndReturnError:(NSError * _Nullable __autoreleasing * _Nullable)error {
-    return TRUE;
-}
-
-- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
-    //
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath
+                      ofObject:(nullable id)object
+                        change:(nullable NSDictionary<NSString *, id> *)change
+                       context:(nullable void *)context
+{
+    NSLog(@"AUdioUnitViewControler allParameterValues key path changed: %s\n", keyPath.UTF8String);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        filterView.frequency = cutoffParameter.value;
+        filterView.resonance = resonanceParameter.value;
+        
+        frequencyLabel.stringValue = [cutoffParameter stringFromValue: nil];
+        resonanceLabel.stringValue = [resonanceParameter stringFromValue: nil];
+        
+        [self updateFilterViewFrequencyAndMagnitudes];
+    });
 }
  */
 
 
 
--(IBAction)gainSliderChanged:(NSSlider*)sender{
+
+#pragma mark-
+-(void) connectViewWithAU {
+    
+    // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the Audio Unit
+    
+    AUParameterTree *paramTree = _audioUnit.parameterTree;
+    
+    if (paramTree) {
+        
+        //_gainParameter = [paramTree valueForKey: @"gainParameter"];
+        _gainParameter = [_audioUnit.parameterTree parameterWithAddress: [_audioUnit getGainParamterAddress]];
+        
+        gainSlider.integerValue = [_gainParameter value];
+        
+        [_audioUnit addObserver: self forKeyPath: @"allParameterValues"
+                        options: NSKeyValueObservingOptionNew
+                        context: _parameterObserverToken];
+    } else {
+        NSLog(@"paramTree is NULL!\n");
+    }
+}
+
+
+
+
+#pragma mark-
+-(void) disconnectViewWithAU {
+    if (_parameterObserverToken) {
+        [_audioUnit.parameterTree removeParameterObserver: _parameterObserverToken];
+        [_audioUnit removeObserver: self forKeyPath: @"allParameterValues" context: _parameterObserverToken];
+        _parameterObserverToken = 0;
+    }
+}
+
+
+
+
+#pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
+-(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
+    
+    [super beginRequestWithExtensionContext: context];
+}
+
+
+#pragma mark- @protocol AUAudioUnitFactory
+-(nullable AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
+                                                   error:(NSError * _Nullable * _Nullable) error{
+    
+    _audioUnit = [[AUv3_Effect_Gain_macOS_ExtensionAudioUnit alloc] initWithComponentDescription:desc /* options:kAudioComponentInstantiation_LoadOutOfProcess */ error:error];
+    
+    if(self.isViewLoaded){
+        [self connectViewWithAU];
+    }
+    
+    return _audioUnit;
+}
+
+
+-(void) requestViewControllerWithCompletionHandler: (void (^_Nullable)(AUViewControllerBase* _Nullable viewController)) completionHandler{
+    
+}
+
+
+/*
+- (BOOL) commitEditingAndReturnError:(NSError * _Nullable __autoreleasing * _Nullable)error {
+    return TRUE;
+}
+
+- (void) encodeWithCoder:(nonnull NSCoder *)aCoder {
+    //
+}
+ */
+
+
+#pragma mark: Actions
+-(IBAction) gainSliderChanged: (nonnull NSSlider*) sender{
     
     [_gainParameter setValue: (int) sender.integerValue];
 }

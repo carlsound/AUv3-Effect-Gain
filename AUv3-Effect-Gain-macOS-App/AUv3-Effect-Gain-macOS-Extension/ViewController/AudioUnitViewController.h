@@ -22,6 +22,35 @@
 
 -(void) viewDidLoad;
 
--(IBAction)gainSliderChanged:(NSSlider*)sender;
+-(void) dealloc;
+
+
+
+-(nonnull AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) getAudioUnit;
+
+-(void) setAudioUnit: (nonnull AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) audioUnit;
+
+
+#pragma mark- KVO
+/*
+-(void) observeValueForKeyPath: (nullable NSString *) keyPath
+                      ofObject: (nullable id) object
+                        change: (nullable NSDictionary<NSString *, id> *) change
+                       context: (nullable void *) context;
+ */
+
+
+#pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
+-(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context;
+
+#pragma mark- @protocol AUAudioUnitFactory
+-(nullable AUAudioUnit *) createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
+                                                            error:(NSError * _Nullable * _Nullable) error;
+
+-(void) requestViewControllerWithCompletionHandler: (void (^_Nullable)(AUViewControllerBase* _Nullable viewController)) completionHandler;
+
+
+#pragma mark: Actions
+-(IBAction) gainSliderChanged: (nonnull NSSlider*) sender;
 
 @end
