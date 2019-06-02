@@ -46,7 +46,7 @@
 }
 
 
-
+/*
 #pragma mark- getter
 - (AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) getAudioUnit {
     
@@ -63,7 +63,7 @@
         }
     });
 }
-
+*/
 
 
 
@@ -94,6 +94,11 @@
 
 #pragma mark-
 -(void) connectViewWithAU {
+    
+    // @protocol AUAudioUnitFactory
+    [self requestViewControllerWithCompletionHandler: ^(AUViewControllerBase* _Nullable viewController){
+        viewController = self;
+    }];
     
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the Audio Unit
     
@@ -127,8 +132,6 @@
 }
 
 
-
-
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     
@@ -140,17 +143,17 @@
 -(nullable AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
                                                    error:(NSError * _Nullable * _Nullable) error{
     
-    _audioUnit = [[AUv3_Effect_Gain_macOS_ExtensionAudioUnit alloc] initWithComponentDescription:desc /* options:kAudioComponentInstantiation_LoadOutOfProcess */ error:error];
+    self.audioUnit = [[AUv3_Effect_Gain_macOS_ExtensionAudioUnit alloc] initWithComponentDescription:desc /* options:kAudioComponentInstantiation_LoadOutOfProcess */ error:error];
     
     if(self.isViewLoaded){
         [self connectViewWithAU];
     }
     
-    return _audioUnit;
+    return self.audioUnit;
 }
 
-
--(void) requestViewControllerWithCompletionHandler: (void (^_Nullable)(AUViewControllerBase* _Nullable viewController)) completionHandler{
+#pragma mark- @protocol AUAudioUnitFactory
+- (void)requestViewControllerWithCompletionHandler:(void (^)(AUViewControllerBase *viewController))completionHandler{
     
 }
 

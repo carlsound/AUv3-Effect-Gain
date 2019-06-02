@@ -225,9 +225,9 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 #pragma mark - AUAudioUnit (AUAudioUnitImplementation)
 
 // Block which subclassers must provide to implement rendering.
--(AUInternalRenderBlock)internalRenderBlock {
-    // Capture in locals to avoid ObjC member lookups. If "self" is captured in render, we're doing it wrong. See sample code.
+-(AUInternalRenderBlock)internalRenderBlock { // https://developer.apple.com/documentation/audiotoolbox/auinternalrenderblock?language=objc
     
+    // Capture in locals to avoid ObjC member lookups. If "self" is captured in render, we're doing it wrong. See sample code.
     AUValue* gainCapture = &_gain;
     AudioStreamBasicDescription *streamBasicDescriptionCapture = &_streamBasicDescription;
     __block UInt64 *totalFramesCapture = &_totalFrames;
@@ -251,7 +251,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
         
         
         // pull in samples to filter
-        pullInputBlock(actionFlags, timestamp, frameCount, 0, renderAudioBufferListCapture);
+        pullInputBlock(actionFlags, timestamp, frameCount, 0, renderAudioBufferListCapture); // https://developer.apple.com/documentation/audiotoolbox/aurenderpullinputblock?language=objc
         
         
         // copy samples from AudioBufferList, apply gain multiplier, write to outputData
@@ -265,7 +265,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
                 Float32 *sample = renderAudioBufferListCapture->mBuffers[renderBuf].mData + (frame * streamBasicDescriptionCapture->mBytesPerFrame);
                 
                 // apply gain multiplier
-                *sample = ( (*sample) * (*gainCapture) );
+                *sample = ( (*sample) * (*gainCapture/100.0) );
                 
                 // https://developer.apple.com/documentation/kernel/1579338-memcpy?language=occ
                 memcpy(outputData->mBuffers[renderBuf].mData + (frame * streamBasicDescriptionCapture->mBytesPerFrame),

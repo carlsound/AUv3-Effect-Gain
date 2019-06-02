@@ -23,6 +23,6 @@ extern const AudioUnitParameterID _GAIN_PARAMETER_ID;
 
 @interface AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit : AUAudioUnit
 
--(AudioUnitParameterID)getGainParamterID;
+//-(AudioUnitParameterID)getGainParamterID;
 
 @end

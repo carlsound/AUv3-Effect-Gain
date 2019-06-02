@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		891B5AAC22A30A0700B89AF7 /* AudioUnitView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891B5AAB22A30A0700B89AF7 /* AudioUnitView.storyboard */; };
+		8925EF9922A447A500B483BC /* AUv3-Effect-Gain-macOS-Extension-noUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 898C9BA822A39EEA003A4F62 /* AUv3-Effect-Gain-macOS-Extension-noUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8925EF9D22A457A800B483BC /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		893DCE472278136400F19BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE462278136400F19BA0 /* AppDelegate.m */; };
 		893DCE4C2278136400F19BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893DCE4B2278136400F19BA0 /* Assets.xcassets */; };
 		893DCE522278136400F19BA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE512278136400F19BA0 /* main.m */; };
@@ -17,11 +19,24 @@
 		893DCE802278140C00F19BA0 /* AudioUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE7F2278140C00F19BA0 /* AudioUnitViewController.m */; };
 		89691582229B0FB0009AB182 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89691581229B0FB0009AB182 /* Application.xib */; };
 		898C9BAC22A39EEA003A4F62 /* AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 898C9BAB22A39EEA003A4F62 /* AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit.m */; };
-		898C9BB722A39EEA003A4F62 /* AUv3-Effect-Gain-macOS-Extension-noUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 898C9BA822A39EEA003A4F62 /* AUv3-Effect-Gain-macOS-Extension-noUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		898C9BBD22A39FB6003A4F62 /* AudioUnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898C9BBC22A39FB6003A4F62 /* AudioUnitController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8925EF9A22A447A500B483BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898C9BA722A39EEA003A4F62;
+			remoteInfo = "AUv3-Effect-Gain-macOS-Extension-noUI";
+		};
+		8925EF9E22A457A800B483BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 893DCE782278140C00F19BA0;
+			remoteInfo = "AUv3-Effect-Gain-macOS-Extension";
+		};
 		893DCE592278136400F19BA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
@@ -36,23 +51,17 @@
 			remoteGlobalIDString = 893DCE412278136400F19BA0;
 			remoteInfo = "AUv3-Effect-Gain-macOS-App";
 		};
-		898C9BB522A39EEA003A4F62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 898C9BA722A39EEA003A4F62;
-			remoteInfo = "AUv3-Effect-Gain-macOS-Extension-noUI";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		893DCE8C2278140C00F19BA0 /* Embed App Extensions */ = {
+		8925EF9C22A447A500B483BC /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				898C9BB722A39EEA003A4F62 /* AUv3-Effect-Gain-macOS-Extension-noUI.appex in Embed App Extensions */,
+				8925EF9922A447A500B483BC /* AUv3-Effect-Gain-macOS-Extension-noUI.appex in Embed App Extensions */,
+				8925EF9D22A457A800B483BC /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,12 +294,13 @@
 				893DCE3E2278136400F19BA0 /* Sources */,
 				893DCE3F2278136400F19BA0 /* Frameworks */,
 				893DCE402278136400F19BA0 /* Resources */,
-				893DCE8C2278140C00F19BA0 /* Embed App Extensions */,
+				8925EF9C22A447A500B483BC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				898C9BB622A39EEA003A4F62 /* PBXTargetDependency */,
+				8925EF9B22A447A500B483BC /* PBXTargetDependency */,
+				8925EF9F22A457A800B483BC /* PBXTargetDependency */,
 			);
 			name = "AUv3-Effect-Gain-macOS-App";
 			productName = "AUv3-Effect-Gain-macOS-App";
@@ -505,6 +515,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8925EF9B22A447A500B483BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898C9BA722A39EEA003A4F62 /* AUv3-Effect-Gain-macOS-Extension-noUI */;
+			targetProxy = 8925EF9A22A447A500B483BC /* PBXContainerItemProxy */;
+		};
+		8925EF9F22A457A800B483BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 893DCE782278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */;
+			targetProxy = 8925EF9E22A457A800B483BC /* PBXContainerItemProxy */;
+		};
 		893DCE5A2278136400F19BA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 893DCE412278136400F19BA0 /* AUv3-Effect-Gain-macOS-App */;
@@ -514,11 +534,6 @@
 			isa = PBXTargetDependency;
 			target = 893DCE412278136400F19BA0 /* AUv3-Effect-Gain-macOS-App */;
 			targetProxy = 893DCE642278136400F19BA0 /* PBXContainerItemProxy */;
-		};
-		898C9BB622A39EEA003A4F62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 898C9BA722A39EEA003A4F62 /* AUv3-Effect-Gain-macOS-Extension-noUI */;
-			targetProxy = 898C9BB522A39EEA003A4F62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

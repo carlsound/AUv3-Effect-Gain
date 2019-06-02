@@ -25,6 +25,14 @@
 
 
 
+#pragma mark- @protocol AUAudioUnitFactory
+- (void) requestViewControllerWithCompletionHandler: (void (^)(AUViewControllerBase *viewController)) completionHandler {
+    
+    completionHandler = nil;
+}
+
+
+
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     

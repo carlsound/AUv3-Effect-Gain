@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreAudioKit/CoreAudioKit.h>
+#import <CoreAudioKit/AUViewController.h>
 //#import "ParameterAddresses.h"
 #import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
 
@@ -18,17 +19,15 @@
     IBOutlet NSSlider* gainSlider;
 }
 
-//@property AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
+@property (nonnull)AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
 
 -(void) viewDidLoad;
 
 -(void) dealloc;
 
+//-(nonnull AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) getAudioUnit;
 
-
--(nonnull AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) getAudioUnit;
-
--(void) setAudioUnit: (nonnull AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) audioUnit;
+//-(void) setAudioUnit: (nonnull AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) audioUnit;
 
 
 #pragma mark- KVO
@@ -44,8 +43,10 @@
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context;
 
 #pragma mark- @protocol AUAudioUnitFactory
+/*
 -(nullable AUAudioUnit *) createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
                                                             error:(NSError * _Nullable * _Nullable) error;
+ */
 
 -(void) requestViewControllerWithCompletionHandler: (void (^_Nullable)(AUViewControllerBase* _Nullable viewController)) completionHandler;
 

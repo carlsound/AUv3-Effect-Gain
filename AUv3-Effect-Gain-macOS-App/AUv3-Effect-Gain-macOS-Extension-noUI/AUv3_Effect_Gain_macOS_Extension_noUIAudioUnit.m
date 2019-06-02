@@ -55,7 +55,7 @@ const AudioUnitParameterID _GAIN_PARAMETER_ID = 0;
 
 
 
-
+#pragma mark - Local Variables
 
 @synthesize parameterTree = _parameterTree;
 
@@ -94,7 +94,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
     
     // Create parameter objects.
     AUParameter* gainParameter = [AUParameterTree createParameterWithIdentifier: @"gainParameter"
-                                                                           name: @"Gain Parameter"
+                                                                           name: @"GainParam"
                                                                         address: _GAIN_PARAMETER_ID
                                                                             min: 0
                                                                             max: 100
@@ -157,11 +157,12 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 }
 
 #pragma mark - Parameter ID Getter
-
+/*
 -(AudioUnitParameterID)getGainParamterID{
     
     return _GAIN_PARAMETER_ID;
 }
+ */
 
 #pragma mark - AUAudioUnit Overrides
 
@@ -184,14 +185,28 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // Allocate resources required to render.
 // Subclassers should call the superclass implementation.
 - (BOOL)allocateRenderResourcesAndReturnError:(NSError **)outError {
+    
     if (![super allocateRenderResourcesAndReturnError:outError]) {
         return NO;
     }
     
     // Validate that the bus formats are compatible.
-    // Allocate your resources.
+    if (_outputBus.format.channelCount != _inputBus.format.channelCount)
+    {
+        if (outError)
+        {
+            *outError = [NSError errorWithDomain: NSOSStatusErrorDomain
+                                            code: kAudioUnitErr_FailedInitialization
+                                        userInfo: nil];
+        }
+        // Notify superclass that initialization was not successful
+        self.renderResourcesAllocated = NO;
+        
+        return NO;
+    }
     
-    _renderAudioBufferList.mNumberBuffers = 2;
+    // Allocate your resources.
+    _renderAudioBufferList.mNumberBuffers = _outputBus.format.channelCount;
     
     _totalFrames = 0;
     
@@ -201,6 +216,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // Deallocate resources allocated in allocateRenderResourcesAndReturnError:
 // Subclassers should call the superclass implementation.
 - (void)deallocateRenderResources {
+    
     // Deallocate your resources.
     [super deallocateRenderResources];
 }
@@ -208,10 +224,9 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 #pragma mark - AUAudioUnit (AUAudioUnitImplementation)
 
 // Block which subclassers must provide to implement rendering.
-- (AUInternalRenderBlock)internalRenderBlock {
+- (AUInternalRenderBlock) internalRenderBlock { // https://developer.apple.com/documentation/audiotoolbox/auinternalrenderblock?language=objc
     
     // Capture in locals to avoid ObjC member lookups. If "self" is captured in render, we're doing it wrong. See sample code.
-    
     AUValue* gainCapture = &_gain;
     AudioStreamBasicDescription *streamBasicDescriptionCapture = &_streamBasicDescription;
     __block UInt64 *totalFramesCapture = &_totalFrames;
@@ -226,17 +241,19 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
                               AudioBufferList *outputData,
                               const AURenderEvent *realtimeEventListHead,
                               AURenderPullInputBlock pullInputBlock) {
-        
+
         // Do event handling and signal processing here.
         
         // use logged AudioStreamBasicDescription format from above (float + packed + noninterleaved)
+        /*
         if (streamBasicDescriptionCapture->mFormatID != kAudioFormatLinearPCM || streamBasicDescriptionCapture->mFormatFlags != 0x29 || streamBasicDescriptionCapture->mChannelsPerFrame != 2) {
             return -999;
         }
+         */
         
         
         // pull in samples to filter
-        pullInputBlock(actionFlags, timestamp, frameCount, 0, renderAudioBufferListCapture);
+        AUAudioUnitStatus auauStatus = pullInputBlock(actionFlags, timestamp, frameCount, 0, renderAudioBufferListCapture); //https://developer.apple.com/documentation/audiotoolbox/aurenderpullinputblock?language=objc
         
         // copy samples from AudioBufferList, apply gain multiplier, write to outputData
         size_t sampleSize = sizeof(Float32);
@@ -249,7 +266,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
                 Float32 *sample = renderAudioBufferListCapture->mBuffers[renderBuf].mData + (frame * streamBasicDescriptionCapture->mBytesPerFrame);
                 
                 // apply gain multiplier
-                *sample = ( (*sample) * (*gainCapture) );
+                //*sample = ( (*sample) * (*gainCapture/100.0) );
                 
                 // https://developer.apple.com/documentation/kernel/1579338-memcpy?language=occ
                 memcpy(outputData->mBuffers[renderBuf].mData + (frame * streamBasicDescriptionCapture->mBytesPerFrame),
@@ -258,7 +275,8 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
             }
         }
         
-        return noErr;
+        //return noErr;
+        return auauStatus;
     };
 }
 
