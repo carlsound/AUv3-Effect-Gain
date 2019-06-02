@@ -11,30 +11,28 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="macos_x86_64" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-Extension/View/Base.lproj/AudioUnitView.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-Extension/View/Base.lproj/AudioUnitView.m">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/AppDelegate.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/AUv3_Effect_Gain_macOS_App.entitlements">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/Info.plist">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,17 +58,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="AUv3-Effect-Gain-macOS-App" type="1d218c8b:XcodeProjectNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="AUv3-Effect-Gain-macOS-App" type="1d218c8b:XcodeProjectNode" />
-              <item name="AUv3-Effect-Gain-Framework" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -93,7 +87,6 @@
         </subPane>
       </pane>
       <pane id="Cidr.FilesView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -101,7 +94,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -138,17 +131,17 @@
       <updated>1556678833575</updated>
       <workItem from="1556678840064" duration="1082000" />
       <workItem from="1557623615925" duration="196000" />
+      <workItem from="1559453552397" duration="437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1278000" />
+    <option name="totallyTimeSpent" value="1715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="7" width="1387" height="714" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26319703" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2669145" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -183,6 +176,18 @@
           <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/AppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/AUv3_Effect_Gain_macOS_App.entitlements">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AUv3-Effect-Gain-macOS-App/AUv3-Effect-Gain-macOS-App/Info.plist">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
