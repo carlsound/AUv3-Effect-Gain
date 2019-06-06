@@ -184,7 +184,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 
 // Allocate resources required to render.
 // Subclassers should call the superclass implementation.
-- (BOOL)allocateRenderResourcesAndReturnError:(NSError **)outError {
+- (BOOL)allocateRenderResourcesAndReturnError: (NSError **)outError {
     
     if (![super allocateRenderResourcesAndReturnError:outError]) {
         return NO;
