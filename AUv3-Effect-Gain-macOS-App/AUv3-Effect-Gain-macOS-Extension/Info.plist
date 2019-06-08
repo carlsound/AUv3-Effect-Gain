@@ -52,10 +52,10 @@
 				</dict>
 			</array>
 		</dict>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.AudioUnit-UI</string>
 		<key>NSExtensionMainStoryboard</key>
 		<string>AudioUnitView</string>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.AudioUnit-UI</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 John Carlson. All rights reserved.</string>

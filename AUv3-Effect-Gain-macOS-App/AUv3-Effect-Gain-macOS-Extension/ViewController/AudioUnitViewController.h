@@ -10,7 +10,8 @@
 #import <CoreAudioKit/CoreAudioKit.h>
 #import <CoreAudioKit/AUViewController.h>
 //#import "ParameterAddresses.h"
-#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
+//#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
+#import "GainAudioUnit.h"
 
 @interface AudioUnitViewController : AUViewController <AUAudioUnitFactory>{
     // https://developer.apple.com/documentation/coreaudiokit/auviewcontroller?language=objc
@@ -19,7 +20,7 @@
     IBOutlet NSSlider* gainSlider;
 }
 
-@property (nonnull)AUv3_Effect_Gain_macOS_ExtensionAudioUnit* audioUnit;
+@property (nonnull)GainAudioUnit* audioUnit;
 
 -(void) viewDidLoad;
 

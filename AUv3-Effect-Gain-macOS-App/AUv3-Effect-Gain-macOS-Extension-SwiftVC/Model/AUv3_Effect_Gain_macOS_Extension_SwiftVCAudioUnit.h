@@ -9,7 +9,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 
 // Define parameter addresses.
-extern const AudioUnitParameterID myParam1;
+extern const AUParameterAddress GAIN_PARAMETER_ADDRESS;
 
 @interface AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit : AUAudioUnit
 

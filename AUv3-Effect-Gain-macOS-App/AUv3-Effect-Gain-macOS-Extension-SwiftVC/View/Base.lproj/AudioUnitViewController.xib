@@ -5,30 +5,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension_SwiftVC" customModuleProvider="target">
-            <connections>
-                <outlet property="view" destination="c22-O7-iKe" id="hzH-WR-f05"/>
-            </connections>
-        </customObject>
+        <customObject id="-2" userLabel="File's Owner"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vuh-1d-ScV">
-                    <rect key="frame" x="127" y="216" width="227" height="19"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Your AudioUnit UI goes here!" id="89P-9B-BR2">
-                        <font key="font" metaFont="systemBold" size="16"/>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5r-mY-u3d">
+                    <rect key="frame" x="18" y="127" width="444" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="QMl-4X-Lic"/>
+                    <connections>
+                        <action selector="gainSliderChanged:" target="UGR-f0-wEk" id="Gdc-ff-4BU"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufb-Vk-4gp">
+                    <rect key="frame" x="224" y="152" width="32" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Gain" id="JNw-oS-dgL">
+                        <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
-            <constraints>
-                <constraint firstItem="vuh-1d-ScV" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="hJj-0N-Uz9"/>
-                <constraint firstItem="vuh-1d-ScV" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="37" id="p2j-1V-v3R"/>
-            </constraints>
         </customView>
+        <viewController id="UGR-f0-wEk" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension_SwiftVC" customModuleProvider="target">
+            <connections>
+                <outlet property="gainSlider" destination="k5r-mY-u3d" id="5rK-6H-niQ"/>
+            </connections>
+        </viewController>
     </objects>
 </document>

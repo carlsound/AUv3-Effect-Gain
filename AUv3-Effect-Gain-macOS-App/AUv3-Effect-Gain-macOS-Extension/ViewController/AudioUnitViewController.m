@@ -7,7 +7,8 @@
 //
 
 #import "AudioUnitViewController.h"
-#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
+//#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
+#import "GainAudioUnit.h"
 
 @interface AudioUnitViewController (){
     
@@ -21,19 +22,25 @@
 //////////////////////////////////////////////////////////
 
 @implementation AudioUnitViewController {
-    
     //AUAudioUnit *audioUnit;
-    AUv3_Effect_Gain_macOS_ExtensionAudioUnit* _audioUnit;
+    //AUv3_Effect_Gain_macOS_ExtensionAudioUnit* _audioUnit;
+    //GainAudioUnit* _audioUnit;
     AUParameter* _gainParameter;
     AUParameterObserverToken _parameterObserverToken;
 }
 
+@synthesize audioUnit;
 
+
+#pragma mark- viewDidLoad
 - (void) viewDidLoad {
     
     [super viewDidLoad];
     
-    if(_audioUnit){
+    if(audioUnit == nil) {
+        return;
+    }
+    else {
         // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
         [self connectViewWithAU];
     }
@@ -102,16 +109,16 @@
     
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the Audio Unit
     
-    AUParameterTree *paramTree = _audioUnit.parameterTree;
+    AUParameterTree *paramTree = audioUnit.parameterTree;
     
     if (paramTree) {
         
         //_gainParameter = [paramTree valueForKey: @"gainParameter"];
-        _gainParameter = [_audioUnit.parameterTree parameterWithAddress: [_audioUnit getGainParamterAddress]];
+        _gainParameter = [audioUnit.parameterTree parameterWithAddress: GAIN_PARAMETER_ADDRESS];
         
         gainSlider.integerValue = [_gainParameter value];
         
-        [_audioUnit addObserver: self forKeyPath: @"allParameterValues"
+        [audioUnit addObserver: self forKeyPath: @"allParameterValues"
                         options: NSKeyValueObservingOptionNew
                         context: _parameterObserverToken];
     } else {
@@ -125,8 +132,8 @@
 #pragma mark-
 -(void) disconnectViewWithAU {
     if (_parameterObserverToken) {
-        [_audioUnit.parameterTree removeParameterObserver: _parameterObserverToken];
-        [_audioUnit removeObserver: self forKeyPath: @"allParameterValues" context: _parameterObserverToken];
+        [audioUnit.parameterTree removeParameterObserver: _parameterObserverToken];
+        [audioUnit removeObserver: self forKeyPath: @"allParameterValues" context: _parameterObserverToken];
         _parameterObserverToken = 0;
     }
 }
@@ -143,7 +150,7 @@
 -(nullable AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
                                                    error:(NSError * _Nullable * _Nullable) error{
     
-    self.audioUnit = [[AUv3_Effect_Gain_macOS_ExtensionAudioUnit alloc] initWithComponentDescription:desc /* options:kAudioComponentInstantiation_LoadOutOfProcess */ error:error];
+    self.audioUnit = [[GainAudioUnit alloc] initWithComponentDescription:desc /* options:kAudioComponentInstantiation_LoadOutOfProcess */ error:error];
     
     if(self.isViewLoaded){
         [self connectViewWithAU];

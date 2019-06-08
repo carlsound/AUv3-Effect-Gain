@@ -7,7 +7,8 @@
 //
 
 #import "AudioUnitController.h"
-#import "AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit.h"
+//#import "AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit.h"
+#import "GainAudioUnit.h"
 
 @implementation AudioUnitController{
     
@@ -18,7 +19,8 @@
 - (AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription)desc
                                                    error:(NSError **)error {
     
-    audioUnit = [[AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit alloc] initWithComponentDescription:desc error:error];
+    //audioUnit = [[AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit alloc] initWithComponentDescription:desc error:error];
+    audioUnit = [[GainAudioUnit alloc] initWithComponentDescription:desc error:error];
     
     return audioUnit;
 }
@@ -28,15 +30,17 @@
 #pragma mark- @protocol AUAudioUnitFactory
 - (void) requestViewControllerWithCompletionHandler: (void (^)(AUViewControllerBase *viewController)) completionHandler {
     
-    completionHandler = nil;
+    completionHandler(nil);
 }
 
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
+/*
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     
-    //[super beginRequestWithExtensionContext: context];
+    [super beginRequestWithExtensionContext: context];
 }
+ */
 
 @end

@@ -266,7 +266,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
                 Float32 *sample = renderAudioBufferListCapture->mBuffers[renderBuf].mData + (frame * streamBasicDescriptionCapture->mBytesPerFrame);
                 
                 // apply gain multiplier
-                //*sample = ( (*sample) * (*gainCapture/100.0) );
+                *sample = ( (*sample) * (*gainCapture/100.0) );
                 
                 // https://developer.apple.com/documentation/kernel/1579338-memcpy?language=occ
                 memcpy(outputData->mBuffers[renderBuf].mData + (frame * streamBasicDescriptionCapture->mBytesPerFrame),

@@ -1,14 +1,16 @@
 //
-//  AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit.m
-//  AUv3-Effect-Gain-macOS-Extension-SwiftVC
+//  GainAudioUnit.m
+//  GainAudioUnitModel
 //
-//  Created by John Carlson on 6/6/19.
+//  Created by John Carlson on 6/8/19.
 //  Copyright © 2019 John Carlson. All rights reserved.
 //
 
-#import "AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit.h"
+#import "GainAudioUnit.h"
 
-#import <AVFoundation/AVFoundation.h>
+//////////////////////////////////////////////////////////////
+
+
 
 // Define parameter addresses.
 const AUParameterAddress GAIN_PARAMETER_ADDRESS = 0;
@@ -17,7 +19,7 @@ const AUParameterAddress GAIN_PARAMETER_ADDRESS = 0;
 
 //////////////////////////////////////////////////////////////
 
-@interface AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit ()
+@interface GainAudioUnit ()
 
 @property (nonatomic, readwrite) AUParameterTree *parameterTree;  // https://developer.apple.com/documentation/audiotoolbox/auparametertree
 
@@ -34,8 +36,8 @@ const AUParameterAddress GAIN_PARAMETER_ADDRESS = 0;
 
 
 
-@implementation AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit
 
+@implementation GainAudioUnit
 
 @synthesize parameterTree = _parameterTree;
 
@@ -46,7 +48,7 @@ AudioStreamBasicDescription _streamBasicDescription; // local copy of the asbd t
 
 UInt64 _totalFrames = 0;
 
-AUValue _gain = 50;  // https://developer.apple.com/documentation/audiotoolbox/auvalue?language=objc
+AUValue _gainValue = 20;  // https://developer.apple.com/documentation/audiotoolbox/auvalue?language=objc
 
 AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documentation/coreaudio/audiobufferlist?language=objc
 
@@ -78,7 +80,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
                                                             dependentParameters: nil];
     
     // Initialize the parameter values.
-    gainParameter.value = 50;
+    gainParameter.value = 20; //_gainValue;
     
     // Create the parameter tree.
     _parameterTree = [AUParameterTree createTreeWithChildren:@[ gainParameter ]];
@@ -96,7 +98,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
     _parameterTree.implementorValueObserver = ^(AUParameter *param, AUValue value) {
         switch (param.address) {
             case GAIN_PARAMETER_ADDRESS:
-                _gain = value;
+                _gainValue = value;
                 break;
             default:
                 break;
@@ -107,7 +109,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
     _parameterTree.implementorValueProvider = ^(AUParameter *param) {
         switch (param.address) {
             case GAIN_PARAMETER_ADDRESS:
-                return _gain; // TODO: is this capturing self?
+                return _gainValue; // TODO: is this capturing self?
             default:
                 return (AUValue) 0.0;
         }
@@ -139,7 +141,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // See sample code.
 - (AUAudioUnitBusArray *)inputBusses {
     //#pragma message("implementation must return non-nil AUAudioUnitBusArray")
-    NSLog (@"Uv3_Effect_Gain_macOS_ExtensionAudioUnit inputBusses called");
+    NSLog (@"GainAudioUnit inputBusses called");
     return _inputBusArray;
 }
 
@@ -148,7 +150,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // See sample code.
 - (AUAudioUnitBusArray *)outputBusses {
     //#pragma message("implementation must return non-nil AUAudioUnitBusArray")
-    NSLog (@"Uv3_Effect_Gain_macOS_ExtensionAudioUnit outputBusses called");
+    NSLog (@"GainAudioUnit outputBusses called");
     return _outputBusArray;
 }
 
@@ -181,18 +183,18 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 - (AUInternalRenderBlock)internalRenderBlock {
     
     // Capture in locals to avoid ObjC member lookups. If "self" is captured in render, we're doing it wrong. See sample code.
-    AUValue* gainCapture = &_gain;
+    AUValue* gainCapture = &_gainValue;
     AudioStreamBasicDescription *streamBasicDescriptionCapture = &_streamBasicDescription;
     __block UInt64 *totalFramesCapture = &_totalFrames;
     AudioBufferList *renderAudioBufferListCapture = &_renderAudioBufferList;
     
     return ^AUAudioUnitStatus(AudioUnitRenderActionFlags *actionFlags,
-                                    const AudioTimeStamp *timestamp,
-                                       AVAudioFrameCount frameCount,
-                                               NSInteger outputBusNumber,
-                                         AudioBufferList *outputData,
-                                     const AURenderEvent *realtimeEventListHead,
-                                  AURenderPullInputBlock pullInputBlock) {
+                              const AudioTimeStamp *timestamp,
+                              AVAudioFrameCount frameCount,
+                              NSInteger outputBusNumber,
+                              AudioBufferList *outputData,
+                              const AURenderEvent *realtimeEventListHead,
+                              AURenderPullInputBlock pullInputBlock) {
         
         // Do event handling and signal processing here.
         
@@ -231,4 +233,3 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 }
 
 @end
-
