@@ -36,11 +36,9 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
-/*
--(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
+- (void)beginRequestWithExtensionContext:(nonnull NSExtensionContext *)context {
     
-    [super beginRequestWithExtensionContext: context];
+    NSArray* inputItems = context.inputItems; // https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/ExtensionCreation.html#//apple_ref/doc/uid/TP40014214-CH5-SW1
 }
- */
 
 @end

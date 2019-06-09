@@ -53,7 +53,7 @@
 			</array>
 		</dict>
 		<key>NSExtensionMainNibFile</key>
-		<string>AudioUnitViewController</string>
+		<string>AudioUnit-UI</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.AudioUnit-UI</string>
 		<key>NSExtensionPrincipalClass</key>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="UAI-zE-Las">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Unit View Controller Swift-->
+        <scene sceneID="Ktd-T0-1ic">
+            <objects>
+                <viewController id="UAI-zE-Las" customClass="AudioUnitViewControllerSwift" customModule="AUv3_Effect_Gain_macOS_Extension_SwiftVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="3WG-fS-0iy">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cr-Ii-ONC">
+                                <rect key="frame" x="3" y="140" width="444" height="19"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="g9P-Ze-cMe"/>
+                                <connections>
+                                    <action selector="handleGainSliderValueChanged:" target="UAI-zE-Las" id="01m-uV-vNA"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TeZ-zx-Z2R">
+                                <rect key="frame" x="209" y="166" width="32" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Gain" id="U4l-93-YtD">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8cr-Ii-ONC" firstAttribute="leading" secondItem="3WG-fS-0iy" secondAttribute="leading" constant="5" id="4KX-OJ-Hhx"/>
+                            <constraint firstItem="TeZ-zx-Z2R" firstAttribute="centerX" secondItem="3WG-fS-0iy" secondAttribute="centerX" id="78e-7S-qcW"/>
+                            <constraint firstItem="8cr-Ii-ONC" firstAttribute="centerY" secondItem="3WG-fS-0iy" secondAttribute="centerY" id="E9w-39-Kb6"/>
+                            <constraint firstItem="8cr-Ii-ONC" firstAttribute="top" secondItem="TeZ-zx-Z2R" secondAttribute="bottom" constant="9" id="FFn-0a-Zik"/>
+                            <constraint firstItem="TeZ-zx-Z2R" firstAttribute="centerX" secondItem="8cr-Ii-ONC" secondAttribute="centerX" id="TN5-xM-rr6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gainSlider" destination="8cr-Ii-ONC" id="mBZ-k1-zH3"/>
+                    </connections>
+                </viewController>
+                <customObject id="qZ8-SK-wED" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5" y="-2"/>
+        </scene>
+    </scenes>
+</document>

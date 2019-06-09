@@ -8,7 +8,7 @@
 
 import CoreAudioKit
 
-public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
+public class AudioUnitViewControllerSwift: AUViewController, AUAudioUnitFactory {
     
     var audioUnit: AUAudioUnit?
     
@@ -17,16 +17,13 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
     //////////////////////////////////////////////////////
     
     // @protocol AUAudioUnitFactory
-    /*
     public func requestViewController(completionHandler: @escaping (NSViewController?) -> Void) {
-        //completionHandler(self)
-        completionHandler(nil)
+        completionHandler(self)
     }
- */
     
     //////////////////////////////////////////////////////
     
-    /*
+
     private func connectViewWithAU() {
         // @protocol AUAudioUnitFactory
         /*
@@ -39,7 +36,6 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         
         // prevent retain cycle in parameter observer
     }
- */
     
     //////////////////////////////////////////////////////
     
@@ -52,23 +48,31 @@ public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
         
         // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
         
-        //connectViewWithAU()
+        connectViewWithAU()
     }
     
     //////////////////////////////////////////////////////
     
     public func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
-        //audioUnit = try AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit(componentDescription: componentDescription, options: [])
-        audioUnit = try GainAudioUnit(componentDescription: componentDescription, options: [])
+        audioUnit = try AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit(componentDescription: componentDescription, options: [])
+        //audioUnit = try GainAudioUnit(componentDescription: componentDescription, options: [])
         return audioUnit!
+    }
+    
+    //////////////////////////////////////////////////////
+    
+    // @protocol NSExtensionRequestHandling
+    override public func beginRequest(with context: NSExtensionContext) {
+        
+        
     }
     
     //////////////////////////////////////////////////////
     
     @IBAction func handleGainSliderValueChanged(_ sender: NSSlider) {
         
-        //guard let gainUnit = audioUnit as? AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit,
-        guard let gainUnit = audioUnit as? GainAudioUnit,
+        guard let gainUnit = audioUnit as? AUv3_Effect_Gain_macOS_Extension_SwiftVCAudioUnit,
+        //guard let gainUnit = audioUnit as? GainAudioUnit,
             let gainParam = gainUnit.parameterTree?.parameter(withAddress: GAIN_PARAMETER_ADDRESS) else { return }
         
         //gainParam.setValue(sender.value, originator: nil)

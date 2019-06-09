@@ -55,7 +55,10 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 
 #pragma mark - Initialization
 
-- (instancetype)initWithComponentDescription:(AudioComponentDescription)componentDescription options:(AudioComponentInstantiationOptions)options error:(NSError **)outError {
+- (instancetype)initWithComponentDescription:(AudioComponentDescription)componentDescription
+                                     options:(AudioComponentInstantiationOptions)options
+                                       error:(NSError **)outError {
+    
     self = [super initWithComponentDescription:componentDescription options:options error:outError];
     
     if (self == nil) {
@@ -141,7 +144,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // See sample code.
 - (AUAudioUnitBusArray *)inputBusses {
     //#pragma message("implementation must return non-nil AUAudioUnitBusArray")
-    NSLog (@"GainAudioUnit inputBusses called");
+    //NSLog (@"GainAudioUnit inputBusses called");
     return _inputBusArray;
 }
 
@@ -150,13 +153,14 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 // See sample code.
 - (AUAudioUnitBusArray *)outputBusses {
     //#pragma message("implementation must return non-nil AUAudioUnitBusArray")
-    NSLog (@"GainAudioUnit outputBusses called");
+    //NSLog (@"GainAudioUnit outputBusses called");
     return _outputBusArray;
 }
 
 // Allocate resources required to render.
 // Subclassers should call the superclass implementation.
 - (BOOL)allocateRenderResourcesAndReturnError:(NSError **)outError {
+    
     if (![super allocateRenderResourcesAndReturnError:outError]) {
         return NO;
     }
@@ -199,9 +203,11 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
         // Do event handling and signal processing here.
         
         // use logged AudioStreamBasicDescription format from above (float + packed + noninterleaved)
+        /*
         if (streamBasicDescriptionCapture->mFormatID != kAudioFormatLinearPCM || streamBasicDescriptionCapture->mFormatFlags != 0x29 || streamBasicDescriptionCapture->mChannelsPerFrame != 2) {
             return -999;
         }
+         */
         
         
         // pull in samples to filter
