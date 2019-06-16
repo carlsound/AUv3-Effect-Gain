@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <CoreAudioKit/CoreAudioKit.h>
+//#import <CoreAudioKit/CoreAudioKit.h>
 #import <CoreAudioKit/AUViewController.h>
 //#import "ParameterAddresses.h"
 //#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"

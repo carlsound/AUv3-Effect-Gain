@@ -104,9 +104,10 @@
 -(void) connectViewWithAU {
     
     // @protocol AUAudioUnitFactory
+    /*
     [self requestViewControllerWithCompletionHandler: ^(AUViewControllerBase* _Nullable viewController){
         viewController = self;
-    }];
+    }];*/
     
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the Audio Unit
     
@@ -141,12 +142,12 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
-/*
+
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     
     [super beginRequestWithExtensionContext: context];
 }
- */
+
 
 
 #pragma mark- @protocol AUAudioUnitFactory
@@ -163,9 +164,11 @@
 }
 
 #pragma mark- @protocol AUAudioUnitFactory
+
 - (void)requestViewControllerWithCompletionHandler:(void (^)(AUViewControllerBase *viewController))completionHandler{
-    
+    completionHandler(self);
 }
+ 
 
 
 /*

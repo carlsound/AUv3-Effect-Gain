@@ -13,6 +13,7 @@
 		891A254C22B5AB4D007F0FB1 /* GainAudioUnitModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; };
 		891A255822B5EA3D007F0FB1 /* GainAudioUnitModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; };
 		891A255922B5EC73007F0FB1 /* GainAudioUnitModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		891A255C22B6AE43007F0FB1 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 894EAF7E22A8D75B00603AF5 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		891B980822AD4BB000AD14B5 /* AudioUnit-UI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B980722AD4BB000AD14B5 /* AudioUnit-UI.xib */; };
 		8925614D22AC1B0000D22A04 /* GainAudioUnitModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8925614B22AC1B0000D22A04 /* GainAudioUnitModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8925615A22AC1CCB00D22A04 /* GainAudioUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8925615822AC1CCB00D22A04 /* GainAudioUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				891A255C22B6AE43007F0FB1 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC.appex in Embed App Extensions */,
 				891A254322B5AB13007F0FB1 /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -123,7 +125,6 @@
 		894EAF8A22A8D75B00603AF5 /* AUv3_Effect_Gain_macOS_Extension_SwiftVC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3_Effect_Gain_macOS_Extension_SwiftVC.entitlements; sourceTree = "<group>"; };
 		895417C9227943B3006962C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		895417CB227943C5006962C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		895417CD227943D3006962C7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		89691581229B0FB0009AB182 /* Application.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
 		898C9BA822A39EEA003A4F62 /* AUv3-Effect-Gain-macOS-Extension-noUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AUv3-Effect-Gain-macOS-Extension-noUI.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898C9BB322A39EEA003A4F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -316,7 +317,6 @@
 		895417C8227943B2006962C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				895417CD227943D3006962C7 /* AudioUnit.framework */,
 				895417CB227943C5006962C7 /* AudioToolbox.framework */,
 				895417C9227943B3006962C7 /* AVFoundation.framework */,
 			);
