@@ -5,20 +5,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="AudioUnitViewController">
+        <customObject id="-2" userLabel="File's Owner" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension" customModuleProvider="target">
             <connections>
+                <outlet property="gainSlider" destination="xsC-Z4-acz" id="ye3-mV-Wnv"/>
                 <outlet property="view" destination="c22-O7-iKe" id="hzH-WR-f05"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="c22-O7-iKe" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension" customModuleProvider="target">
+        <customView id="c22-O7-iKe">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xsC-Z4-acz">
                     <rect key="frame" x="18" y="126" width="444" height="19"/>
                     <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Nuy-dU-Ypk"/>
+                    <connections>
+                        <action selector="gainSliderChanged:" target="-2" id="cMy-fp-0Cy"/>
+                    </connections>
                 </slider>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-dy-QRp">
                     <rect key="frame" x="224" y="151" width="32" height="17"/>
@@ -36,11 +40,8 @@
                 <constraint firstItem="GWd-dy-QRp" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="LXF-sl-UwU"/>
                 <constraint firstItem="GWd-dy-QRp" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="104" id="yDc-U3-46K"/>
             </constraints>
-            <connections>
-                <outlet property="gainSlider" destination="xsC-Z4-acz" id="pCu-Qf-4Ma"/>
-            </connections>
         </customView>
-        <viewController nibName="AudioUnitView" id="Vjr-mn-RTU" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension"/>
+        <viewController nibName="AudioUnitView" id="Vjr-mn-RTU" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension" customModuleProvider="target"/>
         <userDefaultsController representsSharedInstance="YES" id="13K-r6-qz8"/>
     </objects>
 </document>

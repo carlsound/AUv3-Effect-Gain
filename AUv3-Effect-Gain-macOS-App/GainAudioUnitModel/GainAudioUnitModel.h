@@ -16,6 +16,4 @@ FOUNDATION_EXPORT double GainAudioUnitModelVersionNumber;
 FOUNDATION_EXPORT const unsigned char GainAudioUnitModelVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GainAudioUnitModel/PublicHeader.h>
-#import "GainAudioUnit.h"
-
-
+#import <GainAudioUnitModel/GainAudioUnit.h>

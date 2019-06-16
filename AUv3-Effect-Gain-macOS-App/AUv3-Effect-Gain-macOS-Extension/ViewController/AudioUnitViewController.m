@@ -14,14 +14,15 @@
     
 }
 
--(void)connectViewWithAU;
--(void)disconnectViewWithAU;
+//-(void)connectViewWithAU;
+//-(void)disconnectViewWithAU;
 
 @end
 
 //////////////////////////////////////////////////////////
 
 @implementation AudioUnitViewController {
+    
     //AUAudioUnit *audioUnit;
     //AUv3_Effect_Gain_macOS_ExtensionAudioUnit* _audioUnit;
     //GainAudioUnit* _audioUnit;
@@ -140,10 +141,12 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
+/*
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     
     [super beginRequestWithExtensionContext: context];
 }
+ */
 
 
 #pragma mark- @protocol AUAudioUnitFactory

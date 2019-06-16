@@ -11,20 +11,20 @@
 #import <CoreAudioKit/AUViewController.h>
 //#import "ParameterAddresses.h"
 //#import "AUv3_Effect_Gain_macOS_ExtensionAudioUnit.h"
-#import "GainAudioUnit.h"
+#import <GainAudioUnitModel/GainAudioUnitModel.h> // "GainAudioUnit.h"
+
 
 @interface AudioUnitViewController : AUViewController <AUAudioUnitFactory>{
     // https://developer.apple.com/documentation/coreaudiokit/auviewcontroller?language=objc
     //
-    
-    IBOutlet NSSlider* gainSlider;
+    __weak IBOutlet NSSlider* gainSlider;
 }
 
 @property (nonnull)GainAudioUnit* audioUnit;
 
--(void) viewDidLoad;
+//-(void) viewDidLoad;
 
--(void) dealloc;
+//-(void) dealloc;
 
 //-(nonnull AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) getAudioUnit;
 
@@ -41,7 +41,7 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
--(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context;
+//-(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context;
 
 #pragma mark- @protocol AUAudioUnitFactory
 /*
@@ -49,7 +49,9 @@
                                                             error:(NSError * _Nullable * _Nullable) error;
  */
 
+/*
 -(void) requestViewControllerWithCompletionHandler: (void (^_Nullable)(AUViewControllerBase* _Nullable viewController)) completionHandler;
+ */
 
 
 #pragma mark: Actions
