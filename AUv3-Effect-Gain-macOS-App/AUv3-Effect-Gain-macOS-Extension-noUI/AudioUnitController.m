@@ -12,11 +12,11 @@
 
 @implementation AudioUnitController{
     
-    AUAudioUnit *audioUnit;
+    GainAudioUnit *audioUnit;
 }
 
 #pragma mark- @protocol AUAudioUnitFactory
-- (AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription)desc
+- (GainAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription)desc
                                                    error:(NSError **)error {
     
     //audioUnit = [[AUv3_Effect_Gain_macOS_Extension_noUIAudioUnit alloc] initWithComponentDescription:desc error:error];
@@ -36,9 +36,11 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
+/*
 - (void)beginRequestWithExtensionContext:(nonnull NSExtensionContext *)context {
     
     NSArray* inputItems = context.inputItems; // https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/ExtensionCreation.html#//apple_ref/doc/uid/TP40014214-CH5-SW1
 }
+ */
 
 @end

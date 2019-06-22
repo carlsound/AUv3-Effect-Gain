@@ -45,7 +45,7 @@
 
 #pragma mark- @protocol AUAudioUnitFactory
 /*
--(nullable AUAudioUnit *) createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
+-(nullable GainAudioUnit *) createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
                                                             error:(NSError * _Nullable * _Nullable) error;
  */
 

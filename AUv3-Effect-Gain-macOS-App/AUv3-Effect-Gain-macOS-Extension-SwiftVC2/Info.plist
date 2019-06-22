@@ -34,13 +34,13 @@
 					<key>factoryFunction</key>
 					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
 					<key>manufacturer</key>
-					<string>CRLS</string>
+					<string>crls</string>
 					<key>name</key>
 					<string>Carlsound: AUv3-Effect-Gain-macOS-Extension-SwiftVC2</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
-					<string>gswt</string>
+					<string>dcmp</string>
 					<key>tags</key>
 					<array>
 						<string>Effects</string>
@@ -52,8 +52,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>NSExtensionMainNibFile</key>
-		<string>AudioUnitViewController</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.AudioUnit-UI</string>
 		<key>NSExtensionPrincipalClass</key>

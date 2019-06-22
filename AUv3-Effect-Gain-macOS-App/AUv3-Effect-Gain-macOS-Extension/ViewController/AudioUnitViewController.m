@@ -142,16 +142,16 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
-
+/*
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     
     [super beginRequestWithExtensionContext: context];
 }
-
+*/
 
 
 #pragma mark- @protocol AUAudioUnitFactory
--(nullable AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
+-(nullable GainAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
                                                    error:(NSError * _Nullable * _Nullable) error{
     
     self.audioUnit = [[GainAudioUnit alloc] initWithComponentDescription:desc /* options:kAudioComponentInstantiation_LoadOutOfProcess */ error:error];

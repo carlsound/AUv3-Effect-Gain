@@ -9,7 +9,7 @@
 import CoreAudioKit
 
 public class AudioUnitViewController: AUViewController, AUAudioUnitFactory {
-    var audioUnit: AUAudioUnit?
+    var audioUnit: GainAudioUnit?
     
     @IBOutlet var gainSlider: NSSlider!
     

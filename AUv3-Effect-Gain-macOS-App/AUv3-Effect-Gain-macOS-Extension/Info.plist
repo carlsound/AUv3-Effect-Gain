@@ -34,13 +34,13 @@
 					<key>description</key>
 					<string>AUv3-Effect-Gain-macOS-Extension</string>
 					<key>manufacturer</key>
-					<string>CRLS</string>
+					<string>crls</string>
 					<key>name</key>
 					<string>Carlsound: AUv3-Effect-Gain-macOS-Extension</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
-					<string>gain</string>
+					<string>dcmp</string>
 					<key>tags</key>
 					<array>
 						<string>Effects</string>
@@ -54,10 +54,10 @@
 			<key>NSExtensionServiceRoleType</key>
 			<string>NSExtensionServiceRoleTypeEditor</string>
 		</dict>
-		<key>NSExtensionPrincipalClass</key>
-		<string>AudioUnitView</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.AudioUnit-UI</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>AudioUnitView</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 John Carlson. All rights reserved.</string>

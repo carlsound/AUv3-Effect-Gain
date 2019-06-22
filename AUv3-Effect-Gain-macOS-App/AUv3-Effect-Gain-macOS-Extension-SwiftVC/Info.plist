@@ -34,13 +34,13 @@
 					<key>factoryFunction</key>
 					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
 					<key>manufacturer</key>
-					<string>CRLS</string>
+					<string>crls</string>
 					<key>name</key>
 					<string>Carlsound: AUv3-Effect-Gain-macOS-Extension-SwiftVC</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>
-					<string>gnsw</string>
+					<string>dcmp</string>
 					<key>tags</key>
 					<array>
 						<string>Effects</string>
