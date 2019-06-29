@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AudioUnitController : NSObject <AUAudioUnitFactory>
+@interface AudioUnitController : NSViewController <AUAudioUnitFactory>
 
 @end
 

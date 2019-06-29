@@ -20,7 +20,7 @@
     __weak IBOutlet NSSlider* gainSlider;
 }
 
-@property (nonnull)GainAudioUnit* audioUnit;
+//@property (nonatomic)GainAudioUnit* _Nullable audioUnit;
 
 //-(void) viewDidLoad;
 

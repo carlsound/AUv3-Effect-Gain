@@ -21,7 +21,7 @@ const AUParameterAddress GAIN_PARAMETER_ADDRESS = 0;
 
 @interface GainAudioUnit ()
 
-@property (nonatomic, readwrite) AUParameterTree *parameterTree;  // https://developer.apple.com/documentation/audiotoolbox/auparametertree
+@property (atomic, readwrite) AUParameterTree *parameterTree;  // https://developer.apple.com/documentation/audiotoolbox/auparametertree
 
 @property AUAudioUnitBus *outputBus; // https://developer.apple.com/documentation/audiotoolbox/auaudiounitbus?language=objc
 

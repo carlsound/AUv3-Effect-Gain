@@ -12,6 +12,7 @@
 
 @interface AudioUnitViewController (){
     
+    GainAudioUnit* audioUnit;
 }
 
 //-(void)connectViewWithAU;
@@ -30,7 +31,7 @@
     AUParameterObserverToken _parameterObserverToken;
 }
 
-@synthesize audioUnit;
+//@synthesize audioUnit;
 
 
 #pragma mark- viewDidLoad
@@ -54,24 +55,24 @@
 }
 
 
-/*
+
 #pragma mark- getter
-- (AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) getAudioUnit {
+- (GainAudioUnit *) getAudioUnit {
     
-    return _audioUnit;
+    return audioUnit;
 }
 
 #pragma mark- setter
-- (void)setAudioUnit:(AUv3_Effect_Gain_macOS_ExtensionAudioUnit *) audioUnit {
+- (void)setAudioUnit:(GainAudioUnit *) audioUnit {
     
-    _audioUnit = audioUnit;
+    self.audioUnit = audioUnit;
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([self isViewLoaded]) {
             [self connectViewWithAU];
         }
     });
 }
-*/
+
 
 
 
@@ -104,10 +105,10 @@
 -(void) connectViewWithAU {
     
     // @protocol AUAudioUnitFactory
-    /*
+    
     [self requestViewControllerWithCompletionHandler: ^(AUViewControllerBase* _Nullable viewController){
         viewController = self;
-    }];*/
+    }];
     
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the Audio Unit
     
@@ -142,31 +143,36 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
-/*
+
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     
     [super beginRequestWithExtensionContext: context];
 }
-*/
+
 
 
 #pragma mark- @protocol AUAudioUnitFactory
 -(nullable GainAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
                                                    error:(NSError * _Nullable * _Nullable) error{
     
-    self.audioUnit = [[GainAudioUnit alloc] initWithComponentDescription:desc /* options:kAudioComponentInstantiation_LoadOutOfProcess */ error:error];
+    self.audioUnit = [[GainAudioUnit alloc] initWithComponentDescription: desc
+                                                                 options: kAudioComponentInstantiation_LoadOutOfProcess
+                                                                   error: error];
     
     if(self.isViewLoaded){
         [self connectViewWithAU];
     }
     
-    return self.audioUnit;
+    return audioUnit;
 }
 
 #pragma mark- @protocol AUAudioUnitFactory
 
 - (void)requestViewControllerWithCompletionHandler:(void (^)(AUViewControllerBase *viewController))completionHandler{
+    
+    [self loadView];
     completionHandler(self);
+    //completionHandler(nil);
 }
  
 

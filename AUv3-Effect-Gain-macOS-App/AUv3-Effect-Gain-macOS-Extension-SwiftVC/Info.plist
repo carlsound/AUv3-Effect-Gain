@@ -32,7 +32,7 @@
 					<key>description</key>
 					<string>AUv3-Effect-Gain-macOS-Extension-SwiftVC</string>
 					<key>factoryFunction</key>
-					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
+					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewControllerSwift</string>
 					<key>manufacturer</key>
 					<string>crls</string>
 					<key>name</key>
@@ -55,7 +55,7 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.AudioUnit-UI</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
+		<string>$(PRODUCT_MODULE_NAME).AudioUnitViewControllerSwift</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 John Carlson. All rights reserved.</string>
