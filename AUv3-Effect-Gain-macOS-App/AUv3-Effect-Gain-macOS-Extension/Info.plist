@@ -33,6 +33,8 @@
 				<dict>
 					<key>description</key>
 					<string>AUv3-Effect-Gain-macOS-Extension</string>
+                    <key>factoryFunction</key>
+                    <string>AudioUnitViewController</string>
 					<key>manufacturer</key>
 					<string>crls</string>
 					<key>name</key>

@@ -11,8 +11,7 @@
 #import "GainAudioUnit.h"
 
 @interface AudioUnitViewController (){
-    
-    GainAudioUnit* audioUnit;
+
 }
 
 //-(void)connectViewWithAU;
@@ -24,7 +23,8 @@
 
 @implementation AudioUnitViewController {
     
-    //AUAudioUnit *audioUnit;
+    //GainAudioUnit* audioUnit;
+    AUAudioUnit *audioUnit;
     //AUv3_Effect_Gain_macOS_ExtensionAudioUnit* _audioUnit;
     //GainAudioUnit* _audioUnit;
     AUParameter* _gainParameter;
@@ -39,13 +39,12 @@
     
     [super viewDidLoad];
     
-    if(audioUnit == nil) {
+    if(!audioUnit) {
         return;
     }
-    else {
-        // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
-        [self connectViewWithAU];
-    }
+    
+    // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
+    [self connectViewWithAU];
 }
 
 
@@ -57,12 +56,15 @@
 
 
 #pragma mark- getter
+/*
 - (GainAudioUnit *) getAudioUnit {
     
     return audioUnit;
 }
+ */
 
 #pragma mark- setter
+/*
 - (void)setAudioUnit:(GainAudioUnit *) audioUnit {
     
     self.audioUnit = audioUnit;
@@ -72,6 +74,7 @@
         }
     });
 }
+ */
 
 
 
@@ -106,9 +109,11 @@
     
     // @protocol AUAudioUnitFactory
     
+    /*
     [self requestViewControllerWithCompletionHandler: ^(AUViewControllerBase* _Nullable viewController){
         viewController = self;
     }];
+     */
     
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the Audio Unit
     
@@ -152,16 +157,17 @@
 
 
 #pragma mark- @protocol AUAudioUnitFactory
--(nullable GainAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
+-(AUAudioUnit *)createAudioUnitWithComponentDescription:(AudioComponentDescription) desc
                                                    error:(NSError * _Nullable * _Nullable) error{
     
-    self.audioUnit = [[GainAudioUnit alloc] initWithComponentDescription: desc
-                                                                 options: kAudioComponentInstantiation_LoadOutOfProcess
-                                                                   error: error];
-    
+    audioUnit = [[GainAudioUnit alloc] initWithComponentDescription: desc
+                                                            options: kAudioComponentInstantiation_LoadOutOfProcess
+                                                              error: error];
+    /*
     if(self.isViewLoaded){
         [self connectViewWithAU];
     }
+     */
     
     return audioUnit;
 }
@@ -170,9 +176,10 @@
 
 - (void)requestViewControllerWithCompletionHandler:(void (^)(AUViewControllerBase *viewController))completionHandler{
     
-    [self loadView];
-    completionHandler(self);
-    //completionHandler(nil);
+    [self initWithNibName:@"AudioUnitViewController" bundle:nil];
+    //[self loadView];
+    //completionHandler(self);
+    completionHandler(nil);
 }
  
 

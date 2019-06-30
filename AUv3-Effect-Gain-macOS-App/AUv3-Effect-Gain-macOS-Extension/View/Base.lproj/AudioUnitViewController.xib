@@ -41,7 +41,6 @@
                 <constraint firstItem="GWd-dy-QRp" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="104" id="yDc-U3-46K"/>
             </constraints>
         </customView>
-        <viewController nibName="AudioUnitView" id="Vjr-mn-RTU" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension" customModuleProvider="target"/>
         <userDefaultsController representsSharedInstance="YES" id="13K-r6-qz8"/>
     </objects>
 </document>

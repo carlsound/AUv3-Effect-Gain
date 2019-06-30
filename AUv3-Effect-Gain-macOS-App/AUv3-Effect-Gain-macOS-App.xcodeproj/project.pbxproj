@@ -22,6 +22,7 @@
 		8925615E22AC218F00D22A04 /* GainAudioUnitModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; };
 		8925615F22AC21CC00D22A04 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
 		8925616022AC21EC00D22A04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		89297C6C22C9616C0017CA72 /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8932098C22BE591F0068795B /* GainAudioUnitModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		893DCE472278136400F19BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE462278136400F19BA0 /* AppDelegate.m */; };
 		893DCE4C2278136400F19BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893DCE4B2278136400F19BA0 /* Assets.xcassets */; };
@@ -30,12 +31,18 @@
 		893DCE682278136400F19BA0 /* AUv3_Effect_Gain_macOS_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE672278136400F19BA0 /* AUv3_Effect_Gain_macOS_AppUITests.m */; };
 		893DCE802278140C00F19BA0 /* AudioUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE7F2278140C00F19BA0 /* AudioUnitViewController.m */; };
 		894EAF8422A8D75B00603AF5 /* AudioUnitViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EAF8322A8D75B00603AF5 /* AudioUnitViewControllerSwift.swift */; };
-		895774CB22C7B19B0058BADB /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		89691582229B0FB0009AB182 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89691581229B0FB0009AB182 /* Application.xib */; };
 		898C9BBD22A39FB6003A4F62 /* AudioUnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898C9BBC22A39FB6003A4F62 /* AudioUnitController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		89297C6D22C9616C0017CA72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 893DCE782278140C00F19BA0;
+			remoteInfo = "AUv3-Effect-Gain-macOS-Extension";
+		};
 		8932098D22BE591F0068795B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
@@ -57,13 +64,6 @@
 			remoteGlobalIDString = 893DCE412278136400F19BA0;
 			remoteInfo = "AUv3-Effect-Gain-macOS-App";
 		};
-		895774CC22C7B19B0058BADB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 893DCE782278140C00F19BA0;
-			remoteInfo = "AUv3-Effect-Gain-macOS-Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,7 +73,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				895774CB22C7B19B0058BADB /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */,
+				89297C6C22C9616C0017CA72 /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +499,7 @@
 			);
 			dependencies = (
 				8932098E22BE591F0068795B /* PBXTargetDependency */,
-				895774CD22C7B19B0058BADB /* PBXTargetDependency */,
+				89297C6E22C9616C0017CA72 /* PBXTargetDependency */,
 			);
 			name = "AUv3-Effect-Gain-macOS-App";
 			productName = "AUv3-Effect-Gain-macOS-App";
@@ -795,6 +795,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		89297C6E22C9616C0017CA72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 893DCE782278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */;
+			targetProxy = 89297C6D22C9616C0017CA72 /* PBXContainerItemProxy */;
+		};
 		8932098E22BE591F0068795B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8925614822AC1B0000D22A04 /* GainAudioUnitModel */;
@@ -809,11 +814,6 @@
 			isa = PBXTargetDependency;
 			target = 893DCE412278136400F19BA0 /* AUv3-Effect-Gain-macOS-App */;
 			targetProxy = 893DCE642278136400F19BA0 /* PBXContainerItemProxy */;
-		};
-		895774CD22C7B19B0058BADB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 893DCE782278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */;
-			targetProxy = 895774CC22C7B19B0058BADB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1062,6 +1062,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-macOS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1079,6 +1080,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-macOS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1171,6 +1173,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-macOS-App.AUv3-Effect-Gain-macOS-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1190,6 +1193,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-macOS-App.AUv3-Effect-Gain-macOS-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
