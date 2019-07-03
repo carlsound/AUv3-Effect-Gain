@@ -173,14 +173,14 @@
 }
 
 #pragma mark- @protocol AUAudioUnitFactory
-
 - (void)requestViewControllerWithCompletionHandler:(void (^)(AUViewControllerBase *viewController))completionHandler{
     
-    [self initWithNibName:@"AudioUnitViewController" bundle:nil];
+    AUViewControllerBase *viewController = [self initWithNibName:@"AudioUnitViewController" bundle:nil];
     //[self loadView];
-    //completionHandler(self);
-    completionHandler(nil);
+    completionHandler(viewController);
+    //completionHandler(nil);
 }
+
  
 
 
