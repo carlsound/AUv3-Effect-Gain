@@ -23,15 +23,11 @@
 
 @implementation AudioUnitViewController {
     
-    //GainAudioUnit* audioUnit;
     AUAudioUnit *audioUnit;
-    //AUv3_Effect_Gain_macOS_ExtensionAudioUnit* _audioUnit;
-    //GainAudioUnit* _audioUnit;
     AUParameter* _gainParameter;
     AUParameterObserverToken _parameterObserverToken;
 }
 
-//@synthesize audioUnit;
 
 
 #pragma mark- viewDidLoad
@@ -80,26 +76,23 @@
 
 
 #pragma mark- KVO
-/*
+
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath
                       ofObject:(nullable id)object
                         change:(nullable NSDictionary<NSString *, id> *)change
                        context:(nullable void *)context
 {
-    NSLog(@"AUdioUnitViewControler allParameterValues key path changed: %s\n", keyPath.UTF8String);
+    NSLog(@"AudioUnitViewControler allParameterValues key path changed: %s\n", keyPath.UTF8String);
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        filterView.frequency = cutoffParameter.value;
-        filterView.resonance = resonanceParameter.value;
+        //filterView.frequency = cutoffParameter.value;
+        //filterView.resonance = resonanceParameter.value;
         
-        frequencyLabel.stringValue = [cutoffParameter stringFromValue: nil];
-        resonanceLabel.stringValue = [resonanceParameter stringFromValue: nil];
-        
-        [self updateFilterViewFrequencyAndMagnitudes];
+        //[self updateFilterViewFrequencyAndMagnitudes];
     });
 }
- */
+
 
 
 
@@ -108,7 +101,6 @@
 -(void) connectViewWithAU {
     
     // @protocol AUAudioUnitFactory
-    
     /*
     [self requestViewControllerWithCompletionHandler: ^(AUViewControllerBase* _Nullable viewController){
         viewController = self;
@@ -117,9 +109,7 @@
     
     // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the Audio Unit
     
-    AUParameterTree *paramTree = audioUnit.parameterTree;
-    
-    if (paramTree) {
+    if (audioUnit.parameterTree) {
         
         //_gainParameter = [paramTree valueForKey: @"gainParameter"];
         _gainParameter = [audioUnit.parameterTree parameterWithAddress: GAIN_PARAMETER_ADDRESS];
@@ -148,12 +138,10 @@
 
 
 #pragma mark- @protocol NSExtensionRequestHandling; inherited by AUAudioUnitFactory
-
 -(void) beginRequestWithExtensionContext: (nonnull NSExtensionContext *) context {
     
     [super beginRequestWithExtensionContext: context];
 }
-
 
 
 #pragma mark- @protocol AUAudioUnitFactory
@@ -163,25 +151,25 @@
     audioUnit = [[GainAudioUnit alloc] initWithComponentDescription: desc
                                                             options: kAudioComponentInstantiation_LoadOutOfProcess
                                                               error: error];
-    /*
     if(self.isViewLoaded){
         [self connectViewWithAU];
     }
-     */
     
     return audioUnit;
 }
 
 #pragma mark- @protocol AUAudioUnitFactory
+
 - (void)requestViewControllerWithCompletionHandler:(void (^)(AUViewControllerBase *viewController))completionHandler{
     
-    AUViewControllerBase *viewController = [self initWithNibName:@"AudioUnitViewController" bundle:nil];
+    //NSBundle* bndle = [NSBundle bundleWithIdentifier: @"net.carlsound.AUv3-Effect-Gain-macOS-App.AUv3-Effect-Gain-macOS-Extension"];
+    
+    AUViewControllerBase* viewController = [self initWithNibName:@"AudioUnitViewController"
+                                                          bundle: nil];
     //[self loadView];
     completionHandler(viewController);
     //completionHandler(nil);
 }
-
- 
 
 
 /*

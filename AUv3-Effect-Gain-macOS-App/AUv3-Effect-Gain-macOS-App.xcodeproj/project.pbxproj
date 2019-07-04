@@ -10,11 +10,32 @@
 		890CF58522B9E2910035B2B8 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890CF58422B9E2910035B2B8 /* AudioUnitViewController.swift */; };
 		890CF58822B9E2910035B2B8 /* AudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 890CF58622B9E2910035B2B8 /* AudioUnitViewController.xib */; };
 		890CF59522B9E34B0035B2B8 /* GainAudioUnitModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; };
-		890CF59822B9EA690035B2B8 /* GainAudioUnitModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; };
 		891A252522B5A4E0007F0FB1 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A252422B5A4E0007F0FB1 /* ApplicationViewController.m */; };
-		891A254222B5A8B0007F0FB1 /* AudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891A254022B5A8B0007F0FB1 /* AudioUnitViewController.xib */; };
 		891A255822B5EA3D007F0FB1 /* GainAudioUnitModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; };
 		891B980822AD4BB000AD14B5 /* AudioUnitViewControllerSwift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 891B980722AD4BB000AD14B5 /* AudioUnitViewControllerSwift.xib */; };
+		8921220322CE78C300BAA258 /* AudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8921220222CE78C300BAA258 /* AudioUnitViewController.xib */; };
+		8921222A22CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8921222922CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.m */; };
+		8921222D22CE7FF100BAA258 /* AudioUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8921222C22CE7FF100BAA258 /* AudioUnitViewController.m */; };
+		8921223022CE7FF100BAA258 /* AudioUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8921222E22CE7FF100BAA258 /* AudioUnitViewController.xib */; };
+		8921223522CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8921222622CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8921227522CE973F00BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		8921227722CE974D00BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
+		8921227822CE975B00BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
+		8921227922CE977100BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
+		8921227A22CE977A00BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		8921227B22CE978100BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
+		8921227C22CE979200BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
+		8921227D22CE979900BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		8921227E22CE97A300BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
+		8921227F22CE97AF00BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		8921228022CE97B900BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
+		8921228122CE97C400BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
+		8921228222CE97CE00BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		8921228322CE97D800BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
+		8921228422CE97E000BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
+		8921228522CE9B4100BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
+		8921228622CE9B4C00BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
+		8921228722CE9B5B00BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
 		8925614D22AC1B0000D22A04 /* GainAudioUnitModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8925614B22AC1B0000D22A04 /* GainAudioUnitModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8925615A22AC1CCB00D22A04 /* GainAudioUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8925615822AC1CCB00D22A04 /* GainAudioUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8925615B22AC1CCB00D22A04 /* GainAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8925615922AC1CCB00D22A04 /* GainAudioUnit.m */; };
@@ -22,8 +43,6 @@
 		8925615E22AC218F00D22A04 /* GainAudioUnitModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; };
 		8925615F22AC21CC00D22A04 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
 		8925616022AC21EC00D22A04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
-		89297C6C22C9616C0017CA72 /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 893DCE792278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8932098C22BE591F0068795B /* GainAudioUnitModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		893DCE472278136400F19BA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE462278136400F19BA0 /* AppDelegate.m */; };
 		893DCE4C2278136400F19BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893DCE4B2278136400F19BA0 /* Assets.xcassets */; };
 		893DCE522278136400F19BA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 893DCE512278136400F19BA0 /* main.m */; };
@@ -36,19 +55,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		89297C6D22C9616C0017CA72 /* PBXContainerItemProxy */ = {
+		8921223322CE7FF100BAA258 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 893DCE782278140C00F19BA0;
-			remoteInfo = "AUv3-Effect-Gain-macOS-Extension";
-		};
-		8932098D22BE591F0068795B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 893DCE3A2278136400F19BA0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8925614822AC1B0000D22A04;
-			remoteInfo = GainAudioUnitModel;
+			remoteGlobalIDString = 8921222522CE7FF100BAA258;
+			remoteInfo = "AUV3-Effect-Gain-macOS-Extension-ObjC-2";
 		};
 		893DCE592278136400F19BA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -67,26 +79,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8932098622BE57720068795B /* Embed App Extensions */ = {
+		8921220A22CE7C1C00BAA258 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				89297C6C22C9616C0017CA72 /* AUv3-Effect-Gain-macOS-Extension.appex in Embed App Extensions */,
+				8921223522CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8932098F22BE59200068795B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8932098C22BE591F0068795B /* GainAudioUnitModel.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -100,8 +101,17 @@
 		890CF58B22B9E2910035B2B8 /* AUv3_Effect_Gain_macOS_Extension_SwiftVC2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUv3_Effect_Gain_macOS_Extension_SwiftVC2.entitlements; sourceTree = "<group>"; };
 		891A252322B5A4E0007F0FB1 /* ApplicationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
 		891A252422B5A4E0007F0FB1 /* ApplicationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
-		891A254122B5A8B0007F0FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AudioUnitViewController.xib; sourceTree = "<group>"; };
 		891B980722AD4BB000AD14B5 /* AudioUnitViewControllerSwift.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioUnitViewControllerSwift.xib; sourceTree = "<group>"; };
+		8921220222CE78C300BAA258 /* AudioUnitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioUnitViewController.xib; sourceTree = "<group>"; };
+		8921222622CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AUV3-Effect-Gain-macOS-Extension-ObjC-2.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8921222822CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.h; sourceTree = "<group>"; };
+		8921222922CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.m; sourceTree = "<group>"; };
+		8921222B22CE7FF100BAA258 /* AudioUnitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitViewController.h; sourceTree = "<group>"; };
+		8921222C22CE7FF100BAA258 /* AudioUnitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitViewController.m; sourceTree = "<group>"; };
+		8921222F22CE7FF100BAA258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AudioUnitViewController.xib; sourceTree = "<group>"; };
+		8921223122CE7FF100BAA258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8921223222CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUV3_Effect_Gain_macOS_Extension_ObjC_2.entitlements; sourceTree = "<group>"; };
+		8921227622CE974D00BAA258 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GainAudioUnitModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8925614B22AC1B0000D22A04 /* GainAudioUnitModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GainAudioUnitModel.h; sourceTree = "<group>"; };
 		8925614C22AC1B0000D22A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,7 +155,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8921228422CE97E000BAA258 /* AudioToolbox.framework in Frameworks */,
+				8921228322CE97D800BAA258 /* CoreAudioKit.framework in Frameworks */,
+				8921228222CE97CE00BAA258 /* AVFoundation.framework in Frameworks */,
 				890CF59522B9E34B0035B2B8 /* GainAudioUnitModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8921222322CE7FF100BAA258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8921227822CE975B00BAA258 /* AudioToolbox.framework in Frameworks */,
+				8921227722CE974D00BAA258 /* CoreAudioKit.framework in Frameworks */,
+				8921227522CE973F00BAA258 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +185,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890CF59822B9EA690035B2B8 /* GainAudioUnitModel.framework in Frameworks */,
+				8921228722CE9B5B00BAA258 /* CoreAudioKit.framework in Frameworks */,
+				8921228622CE9B4C00BAA258 /* AVFoundation.framework in Frameworks */,
+				8921228522CE9B4100BAA258 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +209,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8921227E22CE97A300BAA258 /* CoreAudioKit.framework in Frameworks */,
+				8921227D22CE979900BAA258 /* AVFoundation.framework in Frameworks */,
+				8921227C22CE979200BAA258 /* AudioToolbox.framework in Frameworks */,
 				8925615D22AC218100D22A04 /* GainAudioUnitModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +220,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8921228122CE97C400BAA258 /* CoreAudioKit.framework in Frameworks */,
+				8921228022CE97B900BAA258 /* AudioToolbox.framework in Frameworks */,
+				8921227F22CE97AF00BAA258 /* AVFoundation.framework in Frameworks */,
 				891A255822B5EA3D007F0FB1 /* GainAudioUnitModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +231,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8921227B22CE978100BAA258 /* CoreAudioKit.framework in Frameworks */,
+				8921227A22CE977A00BAA258 /* AVFoundation.framework in Frameworks */,
+				8921227922CE977100BAA258 /* AudioToolbox.framework in Frameworks */,
 				8925615E22AC218F00D22A04 /* GainAudioUnitModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +277,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8921222722CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2 */ = {
+			isa = PBXGroup;
+			children = (
+				8921222822CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.h */,
+				8921222922CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.m */,
+				8921222B22CE7FF100BAA258 /* AudioUnitViewController.h */,
+				8921222C22CE7FF100BAA258 /* AudioUnitViewController.m */,
+				8921222E22CE7FF100BAA258 /* AudioUnitViewController.xib */,
+				8921223122CE7FF100BAA258 /* Info.plist */,
+				8921223222CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2.entitlements */,
+			);
+			path = "AUV3-Effect-Gain-macOS-Extension-ObjC-2";
+			sourceTree = "<group>";
+		};
 		8925614A22AC1B0000D22A04 /* GainAudioUnitModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +313,7 @@
 				894EAF7F22A8D75B00603AF5 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC */,
 				8925614A22AC1B0000D22A04 /* GainAudioUnitModel */,
 				890CF58022B9E2910035B2B8 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC2 */,
+				8921222722CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2 */,
 				893DCE432278136400F19BA0 /* Products */,
 				895417C8227943B2006962C7 /* Frameworks */,
 			);
@@ -281,6 +330,7 @@
 				894EAF7E22A8D75B00603AF5 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC.appex */,
 				8925614922AC1B0000D22A04 /* GainAudioUnitModel.framework */,
 				890CF57F22B9E2910035B2B8 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC2.appex */,
+				8921222622CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +372,9 @@
 		893DCE7A2278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */ = {
 			isa = PBXGroup;
 			children = (
+				893DCE7E2278140C00F19BA0 /* AudioUnitViewController.h */,
+				893DCE7F2278140C00F19BA0 /* AudioUnitViewController.m */,
+				8921220222CE78C300BAA258 /* AudioUnitViewController.xib */,
 				89F1EAFE2287A11E00007ED7 /* Model */,
 				89F1EAFD2287A11600007ED7 /* View */,
 				89F1EAFC2287A10500007ED7 /* ViewController */,
@@ -370,6 +423,7 @@
 		895417C8227943B2006962C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8921227622CE974D00BAA258 /* CoreAudioKit.framework */,
 				895417CB227943C5006962C7 /* AudioToolbox.framework */,
 				895417C9227943B3006962C7 /* AVFoundation.framework */,
 			);
@@ -414,8 +468,6 @@
 		89F1EAFC2287A10500007ED7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				893DCE7E2278140C00F19BA0 /* AudioUnitViewController.h */,
-				893DCE7F2278140C00F19BA0 /* AudioUnitViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -423,7 +475,6 @@
 		89F1EAFD2287A11600007ED7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				891A254022B5A8B0007F0FB1 /* AudioUnitViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,6 +518,23 @@
 			productReference = 890CF57F22B9E2910035B2B8 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC2.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		8921222522CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8921223622CE7FF100BAA258 /* Build configuration list for PBXNativeTarget "AUV3-Effect-Gain-macOS-Extension-ObjC-2" */;
+			buildPhases = (
+				8921222222CE7FF100BAA258 /* Sources */,
+				8921222322CE7FF100BAA258 /* Frameworks */,
+				8921222422CE7FF100BAA258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AUV3-Effect-Gain-macOS-Extension-ObjC-2";
+			productName = "AUV3-Effect-Gain-macOS-Extension-ObjC-2";
+			productReference = 8921222622CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8925614822AC1B0000D22A04 /* GainAudioUnitModel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8925615222AC1B0000D22A04 /* Build configuration list for PBXNativeTarget "GainAudioUnitModel" */;
@@ -492,14 +560,12 @@
 				893DCE3E2278136400F19BA0 /* Sources */,
 				893DCE3F2278136400F19BA0 /* Frameworks */,
 				893DCE402278136400F19BA0 /* Resources */,
-				8932098622BE57720068795B /* Embed App Extensions */,
-				8932098F22BE59200068795B /* Embed Frameworks */,
+				8921220A22CE7C1C00BAA258 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8932098E22BE591F0068795B /* PBXTargetDependency */,
-				89297C6E22C9616C0017CA72 /* PBXTargetDependency */,
+				8921223422CE7FF100BAA258 /* PBXTargetDependency */,
 			);
 			name = "AUv3-Effect-Gain-macOS-App";
 			productName = "AUv3-Effect-Gain-macOS-App";
@@ -606,6 +672,9 @@
 					890CF57E22B9E2910035B2B8 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					8921222522CE7FF100BAA258 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					8925614822AC1B0000D22A04 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -657,6 +726,7 @@
 				894EAF7D22A8D75B00603AF5 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC */,
 				890CF57E22B9E2910035B2B8 /* AUv3-Effect-Gain-macOS-Extension-SwiftVC2 */,
 				8925614822AC1B0000D22A04 /* GainAudioUnitModel */,
+				8921222522CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2 */,
 			);
 		};
 /* End PBXProject section */
@@ -667,6 +737,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				890CF58822B9E2910035B2B8 /* AudioUnitViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8921222422CE7FF100BAA258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8921223022CE7FF100BAA258 /* AudioUnitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,7 +782,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891A254222B5A8B0007F0FB1 /* AudioUnitViewController.xib in Resources */,
+				8921220322CE78C300BAA258 /* AudioUnitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +809,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				890CF58522B9E2910035B2B8 /* AudioUnitViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8921222222CE7FF100BAA258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8921222A22CE7FF100BAA258 /* AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit.m in Sources */,
+				8921222D22CE7FF100BAA258 /* AudioUnitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,15 +882,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		89297C6E22C9616C0017CA72 /* PBXTargetDependency */ = {
+		8921223422CE7FF100BAA258 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 893DCE782278140C00F19BA0 /* AUv3-Effect-Gain-macOS-Extension */;
-			targetProxy = 89297C6D22C9616C0017CA72 /* PBXContainerItemProxy */;
-		};
-		8932098E22BE591F0068795B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8925614822AC1B0000D22A04 /* GainAudioUnitModel */;
-			targetProxy = 8932098D22BE591F0068795B /* PBXContainerItemProxy */;
+			target = 8921222522CE7FF100BAA258 /* AUV3-Effect-Gain-macOS-Extension-ObjC-2 */;
+			targetProxy = 8921223322CE7FF100BAA258 /* PBXContainerItemProxy */;
 		};
 		893DCE5A2278136400F19BA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -826,10 +908,10 @@
 			name = AudioUnitViewController.xib;
 			sourceTree = "<group>";
 		};
-		891A254022B5A8B0007F0FB1 /* AudioUnitViewController.xib */ = {
+		8921222E22CE7FF100BAA258 /* AudioUnitViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				891A254122B5A8B0007F0FB1 /* Base */,
+				8921222F22CE7FF100BAA258 /* Base */,
 			);
 			name = AudioUnitViewController.xib;
 			sourceTree = "<group>";
@@ -877,6 +959,42 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "AUv3-Effect-Gain-macOS-Extension-SwiftVC2/ViewController/AUv3_Effect_Gain_macOS_Extension_SwiftVC2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8921223722CE7FF100BAA258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "AUV3-Effect-Gain-macOS-Extension-ObjC-2/AUV3_Effect_Gain_macOS_Extension_ObjC_2.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8SEUM7VKM;
+				INFOPLIST_FILE = "AUV3-Effect-Gain-macOS-Extension-ObjC-2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-macOS-App.AUV3-Effect-Gain-macOS-Extension-ObjC-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8921223822CE7FF100BAA258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "AUV3-Effect-Gain-macOS-Extension-ObjC-2/AUV3_Effect_Gain_macOS_Extension_ObjC_2.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8SEUM7VKM;
+				INFOPLIST_FILE = "AUV3-Effect-Gain-macOS-Extension-ObjC-2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.carlsound.AUv3-Effect-Gain-macOS-App.AUV3-Effect-Gain-macOS-Extension-ObjC-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -1288,6 +1406,15 @@
 			buildConfigurations = (
 				890CF58F22B9E2910035B2B8 /* Debug */,
 				890CF59022B9E2910035B2B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8921223622CE7FF100BAA258 /* Build configuration list for PBXNativeTarget "AUV3-Effect-Gain-macOS-Extension-ObjC-2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8921223722CE7FF100BAA258 /* Debug */,
+				8921223822CE7FF100BAA258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

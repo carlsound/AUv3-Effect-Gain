@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fih-Tq-Qdp">
+                    <rect key="frame" x="-2" y="126" width="464" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="wFC-G8-4XP"/>
+                    <connections>
+                        <action selector="gainSliderChanged:" target="4nk-Oy-Dl4" id="SVp-G7-Wff"/>
+                    </connections>
+                </slider>
+            </subviews>
+        </customView>
+        <viewController id="4nk-Oy-Dl4" customClass="AudioUnitViewController" customModule="AUv3_Effect_Gain_macOS_Extension" customModuleProvider="target">
+            <connections>
+                <outlet property="gainSlider" destination="fih-Tq-Qdp" id="AZ1-lZ-pyl"/>
+            </connections>
+        </viewController>
+    </objects>
+</document>
