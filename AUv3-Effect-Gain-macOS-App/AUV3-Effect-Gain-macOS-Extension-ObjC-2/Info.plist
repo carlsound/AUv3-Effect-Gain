@@ -34,7 +34,7 @@
 					<key>factoryFunction</key>
 					<string>AudioUnitViewController</string>
 					<key>manufacturer</key>
-					<string>crls</string>
+					<string>CRLS</string>
 					<key>name</key>
 					<string>Carlsound: AUV3-Effect-Gain-macOS-Extension-ObjC-2</string>
 					<key>sandboxSafe</key>

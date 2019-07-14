@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AudioUnitViewController" customModule="AUV3_Effect_Gain_macOS_Extension_ObjC_2" customModuleProvider="target">
             <connections>
+                <outlet property="gainSlider" destination="e6d-7K-ZHe" id="g48-yM-sH8"/>
                 <outlet property="view" destination="c22-O7-iKe" id="hzH-WR-f05"/>
             </connections>
         </customObject>
@@ -16,13 +17,15 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6d-7K-ZHe">
-                    <rect key="frame" x="18" y="126" width="444" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Z4R-Pz-IC6"/>
+                <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6d-7K-ZHe">
+                    <rect key="frame" x="18" y="127" width="444" height="19"/>
+                    <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="51.690861406619383" tickMarkPosition="above" sliderType="linear" id="Z4R-Pz-IC6"/>
+                    <connections>
+                        <action selector="handleSliderValueChanged:" target="-2" id="D2D-Gg-0Ya"/>
+                    </connections>
                 </slider>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuh-1d-ScV">
-                    <rect key="frame" x="127" y="210" width="227" height="19"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vuh-1d-ScV">
+                    <rect key="frame" x="219" y="162" width="43" height="19"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Gain" id="89P-9B-BR2">
                         <font key="font" metaFont="systemBold" size="16"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -31,8 +34,11 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="vuh-1d-ScV" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="hJj-0N-Uz9"/>
-                <constraint firstItem="vuh-1d-ScV" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="37" id="p2j-1V-v3R"/>
+                <constraint firstItem="e6d-7K-ZHe" firstAttribute="top" secondItem="vuh-1d-ScV" secondAttribute="bottom" constant="18" id="EgH-Ch-3N4"/>
+                <constraint firstItem="vuh-1d-ScV" firstAttribute="centerX" secondItem="e6d-7K-ZHe" secondAttribute="centerX" id="Ic8-0p-XV1"/>
+                <constraint firstItem="e6d-7K-ZHe" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="VQN-XF-mLa"/>
+                <constraint firstAttribute="trailing" secondItem="e6d-7K-ZHe" secondAttribute="trailing" constant="20" symbolic="YES" id="aPc-Sa-S7I"/>
+                <constraint firstItem="e6d-7K-ZHe" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="t48-dt-QEW"/>
             </constraints>
         </customView>
     </objects>

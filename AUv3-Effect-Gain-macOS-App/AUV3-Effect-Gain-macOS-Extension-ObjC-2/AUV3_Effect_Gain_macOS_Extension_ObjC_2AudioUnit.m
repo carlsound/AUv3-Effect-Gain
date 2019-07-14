@@ -16,6 +16,8 @@
 //const AudioUnitParameterID myParam1 = 0;
 const AUParameterAddress GAIN_PARAMETER_ADDRESS = 0;
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 @interface AUV3_Effect_Gain_macOS_Extension_ObjC_2AudioUnit ()
 
 @property (nonatomic, readwrite) AUParameterTree *parameterTree;
@@ -175,6 +177,7 @@ AudioBufferList _renderAudioBufferList; // https://developer.apple.com/documenta
 
 // Block which subclassers must provide to implement rendering.
 - (AUInternalRenderBlock)internalRenderBlock {
+    
     // Capture in locals to avoid ObjC member lookups. If "self" is captured in render, we're doing it wrong. See sample code.
     AUValue* gainCapture = &_gainValue;
     AudioStreamBasicDescription *streamBasicDescriptionCapture = &_streamBasicDescription;

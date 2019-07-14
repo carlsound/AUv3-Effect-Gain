@@ -26,6 +26,8 @@
     AUAudioUnit *audioUnit;
     AUParameter* _gainParameter;
     AUParameterObserverToken _parameterObserverToken;
+    
+    __weak IBOutlet NSSlider *_gainSlider;
 }
 
 

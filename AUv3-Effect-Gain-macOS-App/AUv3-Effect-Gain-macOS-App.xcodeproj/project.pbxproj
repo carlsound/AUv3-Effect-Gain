@@ -33,9 +33,6 @@
 		8921228222CE97CE00BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
 		8921228322CE97D800BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
 		8921228422CE97E000BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
-		8921228522CE9B4100BAA258 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417CB227943C5006962C7 /* AudioToolbox.framework */; };
-		8921228622CE9B4C00BAA258 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895417C9227943B3006962C7 /* AVFoundation.framework */; };
-		8921228722CE9B5B00BAA258 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8921227622CE974D00BAA258 /* CoreAudioKit.framework */; };
 		8925614D22AC1B0000D22A04 /* GainAudioUnitModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8925614B22AC1B0000D22A04 /* GainAudioUnitModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8925615A22AC1CCB00D22A04 /* GainAudioUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8925615822AC1CCB00D22A04 /* GainAudioUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8925615B22AC1CCB00D22A04 /* GainAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8925615922AC1CCB00D22A04 /* GainAudioUnit.m */; };
@@ -185,9 +182,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8921228722CE9B5B00BAA258 /* CoreAudioKit.framework in Frameworks */,
-				8921228622CE9B4C00BAA258 /* AVFoundation.framework in Frameworks */,
-				8921228522CE9B4100BAA258 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
