@@ -17,6 +17,7 @@
     //AUAudioUnit *audioUnit;
    
     __weak IBOutlet NSSlider *gainSlider;
+    __weak IBOutlet NSTextField *gainTextField;
     
     AUParameter* _gainParameter;
 }
@@ -39,6 +40,9 @@
     self.preferredContentSize = NSMakeSize(480, 272);
     self.view.wantsLayer = true;
     self.view.layer.backgroundColor = NSColor.darkGrayColor.CGColor;
+    
+    gainTextField.textColor = NSColor.whiteColor;
+    gainSlider.trackFillColor = NSColor.whiteColor;
     
     if (!audioUnit) {
         return;

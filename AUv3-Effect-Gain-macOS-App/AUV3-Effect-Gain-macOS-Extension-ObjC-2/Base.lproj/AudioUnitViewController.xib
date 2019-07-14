@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="AudioUnitViewController" customModule="AUV3_Effect_Gain_macOS_Extension_ObjC_2" customModuleProvider="target">
             <connections>
                 <outlet property="gainSlider" destination="e6d-7K-ZHe" id="g48-yM-sH8"/>
+                <outlet property="gainTextField" destination="vuh-1d-ScV" id="wPy-Ag-7eD"/>
                 <outlet property="view" destination="c22-O7-iKe" id="hzH-WR-f05"/>
             </connections>
         </customObject>
